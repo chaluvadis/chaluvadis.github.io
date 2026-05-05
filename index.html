@@ -105,7 +105,7 @@
                     <p class="project-label">Trade-offs:</p>
                     <ul>
                         <li>Added 40ms avg latency (acceptable for our use case)</li>
-                        <li>Cold start penalty on model loading (~2s, solved with always-warm Lambda)</li>
+                        <li>Cold start penalty on model loading (~2s, solved with Lambda provisioned concurrency)</li>
                         <li>Storage cost: ~120MB vectors for 500k documents</li>
                         <li>Model drift risk: retraining pipeline runs monthly on user feedback</li>
                     </ul>
@@ -135,7 +135,7 @@
 
                 <p class="project-tried"><span class="project-label">Tried:</span> Rule-based validation (too rigid), statistical thresholds (false positives during seasonal changes), manual review (couldn't scale past 50 clients).</p>
 
-                <p class="project-solution"><span class="project-label">Solution:</span> Built anomaly detection using isolation forests on feature distributions. Tracked 40+ metrics per client (record counts, null rates, value distributions, schema changes). Trained per-tenant models on 90 days historical data, flagged deviations &gt;2 std devs.</p>
+                <p class="project-solution"><span class="project-label">Solution:</span> Built anomaly detection using isolation forests on feature distributions. Tracked 40+ metrics per client (record counts, null rates, value distributions, schema changes). Trained per-tenant models on 90 days historical data, flagged records with isolation forest anomaly scores above the 95th percentile of baseline scores.</p>
 
                 <p class="project-whyml"><span class="project-label">Why ML here:</span> Data patterns varied wildly across clients—healthcare vs finance vs manufacturing. Deterministic rules couldn't capture legitimate variation vs actual problems.</p>
 
@@ -186,7 +186,7 @@
                     <p class="project-label">Scaling challenges solved:</p>
                     <ul>
                         <li>Connection pool exhaustion: moved to pgbouncer, reduced connections from 2000+ to 200</li>
-                        <li>Cache stampede on popular queries: added probabilistic early expiration</li>
+                        <li>Cache stampede on popular queries: added probabilistic early expiration (randomly expire entries slightly before TTL to distribute regeneration load)</li>
                         <li>Hot tenant problem: implemented per-tenant circuit breakers</li>
                         <li>Cost control: spot instances for non-critical workloads (saved ~40% compute cost)</li>
                     </ul>
