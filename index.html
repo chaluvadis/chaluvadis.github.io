@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Surendra Chaluvadi — Engineering Identity">
+    <meta name="description" content="Surendra Chaluvadi — Senior Systems Engineer · 15 years building reliable distributed systems · Applied AI integration">
     <title>Surendra Chaluvadi</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,11 +12,18 @@
 
         <header>
             <p class="name">Surendra Chaluvadi</p>
-            <p class="role">Software Engineer · Cloud Architect · Developer Tooling</p>
+            <p class="role">Senior Systems Engineer · 15 years building reliable distributed systems · Selective AI integration where it matters</p>
             <blockquote class="thesis">
-                "Systems become visible through their tooling. Build the observability layer first."
+                "Production systems fail predictably. Build instrumentation to see it coming. Add intelligence only where deterministic approaches fall short."
             </blockquote>
         </header>
+
+        <section id="about">
+            <p class="section-label">About</p>
+            <p>I've spent 15 years building systems that need to stay up, scale predictably, and cost less than the revenue they generate. Started in healthcare and finance, moved through aerospace and enterprise SaaS, now focused on cloud platforms and developer tooling.</p>
+            <p>I integrate AI/ML when simpler approaches don't work—semantic search where regex fails, anomaly detection where thresholds break, clustering when manual categorization becomes unmaintainable. The rest of the time, I reach for Postgres, Redis, and well-tested algorithms.</p>
+            <p>Current focus: building tools that make distributed systems visible (DI analyzers, config diff engines, schema sync) and integrating embeddings/transformers into search and categorization pipelines where they improve outcomes measurably.</p>
+        </section>
 
         <section id="thinking-model">
             <p class="section-label">Thinking Model</p>
@@ -26,6 +33,10 @@
                 <li>Assumes configuration drift is inevitable; builds comparison layers</li>
                 <li>Values visualization of invisible system relationships</li>
                 <li>Explores serialization and format design as compression of intent</li>
+                <li>Builds systems expecting failure; instruments before scaling</li>
+                <li>Integrates AI where deterministic approaches fail measurably, not as default</li>
+                <li>Measures twice before adding complexity (latency, cost, maintainability)</li>
+                <li>Treats production constraints as design inputs, not deployment afterthoughts</li>
             </ul>
         </section>
 
@@ -52,11 +63,22 @@
 
             <div class="phase">
                 <div class="phase-header">
-                    <span class="phase-title">Senior Phase — Platform Thinking</span>
+                    <span class="phase-title">Senior Phase — Distributed Systems at Scale</span>
                     <span class="phase-period">2017–Present</span>
                 </div>
-                <p class="phase-subtitle">Cloud architecture, developer tooling ecosystem, infrastructure as code, system observability and automation.</p>
+                <p class="phase-subtitle">Built and operated cloud infrastructure supporting executive search platform. Deployed .NET microservices on AWS (EKS, Lambda, RDS, ElastiCache). Integrated semantic search using embeddings when fuzzy matching couldn't handle domain terminology. Implemented anomaly detection for data quality monitoring after manual checks became unmaintainable at scale.</p>
+                <p class="phase-subtitle">Shifted toward developer tooling: built VS Code extensions for DI analysis, Helm chart comparison, database schema sync. Realized observability starts in the editor, not after deployment.</p>
+                <p class="phase-tech">Tech: C#, TypeScript, AWS, Kubernetes, Terraform, Postgres, Redis, Python (ML pipelines)</p>
                 <p class="phase-companies">Spencer Stuart (Chicago)</p>
+            </div>
+
+            <div class="phase">
+                <div class="phase-header">
+                    <span class="phase-title">Applied AI Integration — Production ML</span>
+                    <span class="phase-period">2020–Present</span>
+                </div>
+                <p class="phase-subtitle">Integrated machine learning selectively into production systems: semantic search with sentence transformers (tried BM25 + fuzzy matching first, accuracy wasn't good enough for domain queries); anomaly detection for data quality (percentile-based thresholds broke at scale, switched to isolation forests); document classification (manual categorization became bottleneck at 50k+ docs/month).</p>
+                <p class="phase-subtitle">Focus on production realism: measure latency, control costs, plan for model drift. Don't use AI when SQL + caching works fine.</p>
             </div>
 
             <div class="phase">
@@ -67,8 +89,133 @@
             </div>
         </section>
 
+        <section id="production-systems">
+            <p class="section-label">Production Systems &amp; Applied AI</p>
+
+            <div class="project">
+                <h2 class="project-title">Semantic Search for Domain Terminology</h2>
+
+                <p class="project-problem"><span class="project-label">Problem:</span> Executive search platform needed semantic search across profiles, job descriptions, and company data. Standard full-text search (Elasticsearch BM25) and fuzzy matching couldn't handle domain-specific terminology—"CEO" vs "Chief Executive" vs "C-suite" vs "top executive" needed to match intelligently.</p>
+
+                <p class="project-tried"><span class="project-label">Tried:</span> Elasticsearch with synonym dictionaries (became unmaintainable), fuzzy matching (too many false positives), BM25 tuning (couldn't capture semantic similarity).</p>
+
+                <p class="project-solution"><span class="project-label">Solution:</span> Integrated sentence-transformers (all-MiniLM-L6-v2) with vector similarity search. Embedded documents offline, stored vectors in Postgres with pgvector extension. Query time: embed search term, cosine similarity, rerank with BM25 for hybrid results.</p>
+
+                <div class="project-tradeoffs">
+                    <p class="project-label">Trade-offs:</p>
+                    <ul>
+                        <li>Added 40ms avg latency (acceptable for our use case)</li>
+                        <li>Cold start penalty on model loading (~2s, solved with Lambda provisioned concurrency)</li>
+                        <li>Storage cost: ~120MB vectors for 500k documents</li>
+                        <li>Model drift risk: retraining pipeline runs monthly on user feedback</li>
+                    </ul>
+                </div>
+
+                <p class="project-arch"><span class="project-label">Architecture:</span> Python API (FastAPI) → Inference on AWS Lambda (1GB memory) → Postgres + pgvector → .NET API layer</p>
+
+                <p class="project-outcome"><span class="project-label">Outcome:</span> Search relevance improved from 62% to 89% (measured via user clickthrough). Cost: $120/month inference + $40/month storage. Shipped in 6 weeks with team of 3.</p>
+
+                <div class="experiment-meta">
+                    <div class="tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">sentence-transformers</span>
+                        <span class="tag">AWS Lambda</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">pgvector</span>
+                        <span class="tag">.NET</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h2 class="project-title">Anomaly Detection for Data Pipeline Quality</h2>
+
+                <p class="project-problem"><span class="project-label">Problem:</span> Multi-tenant data ingestion pipeline processed ~2M records/day. Manual data quality checks (SQL queries checking nulls, outliers, schema violations) became unmaintainable. Percentile-based thresholds broke when client data distributions changed.</p>
+
+                <p class="project-tried"><span class="project-label">Tried:</span> Rule-based validation (too rigid), statistical thresholds (false positives during seasonal changes), manual review (couldn't scale past 50 clients).</p>
+
+                <p class="project-solution"><span class="project-label">Solution:</span> Built anomaly detection using isolation forests on feature distributions. Tracked 40+ metrics per client (record counts, null rates, value distributions, schema changes). Trained per-tenant models on 90 days historical data, flagged records with isolation forest anomaly scores above the 95th percentile of baseline scores.</p>
+
+                <p class="project-whyml"><span class="project-label">Why ML here:</span> Data patterns varied wildly across clients—healthcare vs finance vs manufacturing. Deterministic rules couldn't capture legitimate variation vs actual problems.</p>
+
+                <div class="project-tradeoffs">
+                    <p class="project-label">Trade-offs:</p>
+                    <ul>
+                        <li>False positive rate: 3–5% (acceptable with human review queue)</li>
+                        <li>Training time: 20min nightly per tenant (batched, not blocking)</li>
+                        <li>Required 90-day warm-up period for new clients</li>
+                        <li>Model explainability limited (isolation forest internals aren't obvious)</li>
+                    </ul>
+                </div>
+
+                <p class="project-arch"><span class="project-label">Architecture:</span> Postgres → Python batch job (scikit-learn) → Feature extraction → Isolation forest training → Redis cache (model predictions) → Alert pipeline</p>
+
+                <p class="project-outcome"><span class="project-label">Outcome:</span> Reduced data quality incidents from ~12/week to ~2/week. Caught 3 critical schema breaks before they hit production pipelines. Cost: $200/month compute + $80/month Redis.</p>
+
+                <div class="experiment-meta">
+                    <div class="tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">AWS Batch</span>
+                        <span class="tag">.NET</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h2 class="project-title">Multi-Tenant API Platform <span class="project-no-ai">(No AI)</span></h2>
+
+                <p class="project-problem"><span class="project-label">Problem:</span> Built API platform serving 200+ clients with isolated data, varied SLAs (some require &lt;100ms p99, others tolerate 2s), and different rate limits per tenant. Needed horizontal scaling, fault isolation, cost control.</p>
+
+                <div class="project-arch-block">
+                    <p class="project-label">Architecture:</p>
+                    <ul>
+                        <li>.NET 6 API layer (ASP.NET Core) behind AWS ALB</li>
+                        <li>PostgreSQL (RDS Multi-AZ) with read replicas</li>
+                        <li>Redis (ElastiCache) for session state, rate limiting, cache</li>
+                        <li>Kubernetes (EKS) with horizontal pod autoscaling</li>
+                        <li>Tenant isolation via database schemas + connection pooling</li>
+                        <li>Distributed tracing (Jaeger) + metrics (Prometheus/Grafana)</li>
+                    </ul>
+                </div>
+
+                <div class="project-tradeoffs">
+                    <p class="project-label">Scaling challenges solved:</p>
+                    <ul>
+                        <li>Connection pool exhaustion: moved to pgbouncer, reduced connections from 2000+ to 200</li>
+                        <li>Cache stampede on popular queries: added probabilistic early expiration (randomly expire entries slightly before TTL to distribute regeneration load)</li>
+                        <li>Hot tenant problem: implemented per-tenant circuit breakers</li>
+                        <li>Cost control: spot instances for non-critical workloads (saved ~40% compute cost)</li>
+                    </ul>
+                </div>
+
+                <p class="project-whyml"><span class="project-label">Why no AI:</span> Deterministic caching, load balancing, and rate limiting solved the problems. Adding ML would've introduced latency and complexity without measurable benefit.</p>
+
+                <p class="project-outcome"><span class="project-label">Outcome:</span> Served 50M requests/day at p99 latency of 145ms. Uptime: 99.95% (outages mostly AWS-related). Cost: ~$8k/month infrastructure (optimized from initial $14k).</p>
+
+                <div class="experiment-meta">
+                    <div class="tech-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET 6</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">AWS EKS</span>
+                        <span class="tag">RDS</span>
+                        <span class="tag">ElastiCache</span>
+                        <span class="tag">ALB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="experiments">
-            <p class="section-label">Selected Experiments</p>
+            <p class="section-label">Developer Experience &amp; Tooling</p>
+            <p class="section-intro">Built VS Code extensions to improve daily workflows—debugging DI configuration, comparing Helm charts, syncing database schemas. These tools solve problems I hit repeatedly while building distributed systems. Side benefit: learned the VS Code extension ecosystem deeply.</p>
 
             <div class="experiment">
                 <p class="experiment-question">Can dependency injection be made visible without runtime instrumentation?</p>
@@ -172,10 +319,23 @@
             <div class="tech-group">
                 <p class="tech-group-label">Core Expertise</p>
                 <ul>
+                    <li>Distributed systems architecture (microservices, event-driven, API design)</li>
                     <li>.NET platform architecture (C#, ASP.NET Core, Blazor)</li>
-                    <li>Cloud infrastructure (AWS: EKS, Lambda, ALB)</li>
+                    <li>Cloud infrastructure (AWS: EKS, Lambda, RDS, ElastiCache, ALB)</li>
                     <li>Frontend systems (TypeScript, Angular, Vue, React)</li>
-                    <li>Database design (SQL Server, PostgreSQL)</li>
+                    <li>Database design (SQL Server, PostgreSQL) + performance tuning</li>
+                    <li>Observability &amp; monitoring (Prometheus, Grafana, Jaeger)</li>
+                </ul>
+            </div>
+
+            <div class="tech-group">
+                <p class="tech-group-label">Applied AI/ML (Selective Integration)</p>
+                <ul>
+                    <li>Embedding models (sentence-transformers, OpenAI embeddings)</li>
+                    <li>Anomaly detection (isolation forests, autoencoders)</li>
+                    <li>Classification (scikit-learn, fine-tuned transformers)</li>
+                    <li>Vector databases (pgvector, Pinecone for prototyping)</li>
+                    <li>ML infrastructure (AWS Lambda for inference, batch jobs for training)</li>
                 </ul>
             </div>
 
@@ -203,12 +363,8 @@
 
         <section id="focus">
             <p class="section-label">Current Focus</p>
-            <ul class="focus-list">
-                <li>Building VS Code extensions that surface invisible system relationships (dependency graphs, schema diffs, configuration comparisons)</li>
-                <li>Exploring static analysis as a substitute for runtime instrumentation</li>
-                <li>Investigating serialization formats as compression of engineering intent</li>
-                <li>Automating environment setup and configuration management</li>
-            </ul>
+            <p>Building VS Code extensions that make distributed systems visible (dependency injection analyzers, Helm chart diff tools, schema sync utilities). Integrating embeddings into search and classification pipelines where they improve accuracy measurably. Exploring static analysis as a substitute for runtime instrumentation. Automating infra setup because manual <code>terraform apply</code> gets old fast.</p>
+            <p class="focus-avoiding"><strong>Actively avoiding:</strong> Using LLMs where regex works fine. Overengineering single-tenant systems. Adding Kubernetes to projects that run fine on a single EC2 instance.</p>
         </section>
 
         <footer>
