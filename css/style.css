@@ -398,8 +398,66 @@ button {
 }
 
 /* =========================================
-   5. TYPOGRAPHY CLASSES
-   ========================================= */
+    5. TYPOGRAPHY CLASSES
+    ========================================= */
+
+.text-headline-lg {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-headline-lg);
+  font-weight: var(--font-weight-headline-lg);
+  line-height: var(--lh-headline-lg);
+  letter-spacing: var(--ls-headline-lg);
+}
+.text-headline-md {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-headline-md);
+  font-weight: var(--font-weight-headline-md);
+  line-height: var(--lh-headline-md);
+  letter-spacing: var(--ls-headline-md);
+}
+.text-headline-sm {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-headline-sm);
+  font-weight: var(--font-weight-headline-sm);
+  line-height: var(--lh-headline-sm);
+  letter-spacing: var(--ls-headline-sm);
+}
+.text-body-lg {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-body-lg);
+  font-weight: var(--font-weight-body-lg);
+  line-height: var(--lh-body-lg);
+  letter-spacing: var(--ls-body-lg);
+}
+.text-body-md {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-body-md);
+  font-weight: var(--font-weight-body-md);
+  line-height: var(--lh-body-md);
+  letter-spacing: var(--ls-body-md);
+}
+.text-label-caps {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-label-md);
+  font-weight: var(--font-weight-label-md);
+  line-height: var(--lh-label-md);
+  letter-spacing: var(--ls-label-md);
+  text-transform: uppercase;
+}
+.text-code-sm {
+  font-family: 'Space Grotesk', monospace;
+  font-size: var(--font-code-sm);
+  font-weight: var(--font-weight-code-sm);
+  line-height: var(--lh-code-sm);
+  letter-spacing: var(--ls-code-sm);
+}
+.text-md {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--font-body-md);
+  font-weight: var(--font-weight-body-md);
+  line-height: var(--lh-body-md);
+  letter-spacing: var(--ls-body-md);
+}
 
 .font-headline-lg {
   font-family: 'Space Grotesk', sans-serif;
@@ -408,7 +466,6 @@ button {
   line-height: var(--lh-headline-lg);
   letter-spacing: var(--ls-headline-lg);
 }
-
 .font-headline-md {
   font-family: 'Space Grotesk', sans-serif;
   font-size: var(--font-headline-md);
@@ -416,7 +473,6 @@ button {
   line-height: var(--lh-headline-md);
   letter-spacing: var(--ls-headline-md);
 }
-
 .font-headline-sm {
   font-family: 'Space Grotesk', sans-serif;
   font-size: var(--font-headline-sm);
@@ -424,7 +480,6 @@ button {
   line-height: var(--lh-headline-sm);
   letter-spacing: var(--ls-headline-sm);
 }
-
 .font-body-lg {
   font-family: 'Space Grotesk', sans-serif;
   font-size: var(--font-body-lg);
@@ -432,7 +487,6 @@ button {
   line-height: var(--lh-body-lg);
   letter-spacing: var(--ls-body-lg);
 }
-
 .font-body-md {
   font-family: 'Space Grotesk', sans-serif;
   font-size: var(--font-body-md);
@@ -440,7 +494,6 @@ button {
   line-height: var(--lh-body-md);
   letter-spacing: var(--ls-body-md);
 }
-
 .font-label-md {
   font-family: 'Space Grotesk', sans-serif;
   font-size: var(--font-label-md);
@@ -449,7 +502,7 @@ button {
   letter-spacing: var(--ls-label-md);
   text-transform: uppercase;
 }
-
+.font-label-caps { font-family: 'Space Grotesk', sans-serif; }
 .font-code-sm {
   font-family: 'Space Grotesk', monospace;
   font-size: var(--font-code-sm);
@@ -916,6 +969,11 @@ ul.list-disc {
 /* Origin utility for transforms */
 .origin-top-right {
   transform-origin: top right;
+}
+
+/* Additional styling for timeline indicators */
+.pb-xl {
+  padding-bottom: var(--spacing-xl);
 }
 
 /* =========================================
