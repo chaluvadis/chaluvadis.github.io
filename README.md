@@ -1,82 +1,74 @@
-<div align="left">
+# chaluvadis.github.io
 
-# Surendra Chaluvadi
-**Platform Engineering · DevSecOps · AI Workload Infrastructure**
-
-I build developer platforms, secure cloud infrastructure, and operational tooling for distributed systems.  
-Most of my recent work sits at the intersection of Kubernetes, zero-trust security, observability, and AI-enabled platform workflows.
-
-<br />
-
-## About
-
-I focus on making infrastructure easier to operate and safer to scale — from workload identity and secrets management to internal tooling, operators, and automation pipelines.
-
-## Skills
-
-**Platform / Cloud**  
-Kubernetes, AWS, Azure, Docker, Terraform, GitHub Actions, Helm
-
-**Security / Reliability**  
-DevSecOps, zero-trust architecture, workload identity, PKI, secrets management, observability
-
-**Backend / Tooling**  
-.NET, TypeScript, Node.js, Python, FastAPI, PostgreSQL, Redis
-
-**Current Technical Themes**  
-Platform engineering, AI-assisted developer workflows, cloud-native operations, internal tools
+Personal engineering landing page for **Surendra Chaluvadi** — backend and platform engineer building secure cloud systems, developer tooling, and AI-ready infrastructure.
 
 ---
 
-## Featured Work
+## What this site is
 
-### [`valkey-operator`](https://github.com/chaluvadis/valkey-operator)
-Kubernetes operator work focused on automating Valkey cluster lifecycle management.  
-**Proof:** deployment automation, scaling, rolling upgrades, failover, TLS, and access control workflows.
+A recruiter-optimized, static landing page that communicates engineering identity in under 10 seconds. Designed as a modern engineering product page — not a resume, not a generic portfolio.
 
-### [`openbao-spire-integration`](https://github.com/chaluvadis/openbao-spire-integration)
-Zero-trust Kubernetes architecture combining SPIRE workload identity with OpenBao secrets and PKI.  
-**Proof:** short-lived credentials, identity-based access, multi-cluster trust federation, and rotation-focused design.
-
-### [`agentic-platform-engineering`](https://github.com/chaluvadis/agentic-platform-engineering)
-Practical patterns for using AI agents in platform engineering workflows.  
-**Proof:** reusable prompts, workflow automation concepts, documentation generation, and standards enforcement in CI/CD.
-
-### [`grafana-alloy-toolkit`](https://github.com/chaluvadis/grafana-alloy-toolkit)
-VS Code extension for working with Grafana Alloy configuration.  
-**Proof:** syntax highlighting, validation, formatting, snippets, and generated documentation for observability configs.
-
-### [`linkedin-medium-publish-pipeline`](https://github.com/chaluvadis/linkedin-medium-publish-pipeline)
-TypeScript CLI pipeline for publishing Markdown content to LinkedIn and Medium.  
-**Proof:** frontmatter parsing, OAuth-based publishing, platform targeting, dry-run support, and testable CLI structure.
-
-### [`finance-trading-app`](https://github.com/chaluvadis/finance-trading-app)
-A monorepo for a trading and personal finance platform with backend APIs, workers, and deployment infrastructure.  
-**Proof:** FastAPI services, WebSocket streaming, background jobs, Dockerized deployment, TLS setup, and operational docs.
+The page is the source of truth for:
+- Who I am and what I build
+- Featured open-source systems and tooling
+- Skill groups organized by domain
+- Links to GitHub and LinkedIn for direct contact
 
 ---
 
-## Experience Snapshot
+## Site sections
 
-- 15+ years working across distributed systems, backend engineering, cloud infrastructure, and developer tooling
-- Recent emphasis on platform engineering, Kubernetes-based systems, and secure infrastructure design
-- Builds both infrastructure primitives and the tooling/documentation that make them usable by other engineers
-
----
-
-## Current Focus
-
-- Platform engineering patterns for AI-native teams
-- Kubernetes security and workload identity
-- Internal developer tools that reduce operational friction
-- Observability and deployment automation
+| Section | Purpose |
+|---|---|
+| **Hero** | Name, positioning, GitHub / LinkedIn CTAs |
+| **Proof strip** | Compact row of career and output proof points |
+| **About** | 2-paragraph engineering identity summary |
+| **Featured Systems** | Curated repos — operators, security tooling, platform tools |
+| **Skills** | Domain-grouped: Platform/Cloud, Security/Identity, Backend/Tooling, AI/Observability |
+| **Engineering Artifacts** | Context on GitHub as an engineering artifact system |
+| **Contact** | Role fit statement + direct CTA links |
 
 ---
 
-## Links
+## Customization
 
-- LinkedIn: [linkedin.com/in/surendra-chaluvadi](https://linkedin.com/in/surendra-chaluvadi)
-- GitHub: [github.com/chaluvadis](https://github.com/chaluvadis)
-- Site / Resume: [chaluvadis.github.io](https://chaluvadis.github.io)
+### `index.html`
+All content lives directly in the HTML — no build step required. To update:
+- **Hero tagline** — edit the `<p class="hero-tagline">` block
+- **Proof strip numbers** — edit `<div class="proof-value">` values
+- **Featured systems** — each `<div class="system-card">` is self-contained; add, remove, or edit cards directly
+- **Skills** — each `<div class="skill-group">` block contains a `<ul class="skill-list">`
+- **Contact message** — edit `<p class="contact-intro">`
 
-</div>
+### `styles.css`
+Design tokens are defined as CSS custom properties in `:root` at the top of the file:
+
+```css
+:root {
+  --bg:         #0b0f14;   /* page background */
+  --surface:    #111820;   /* card / panel surface */
+  --border:     #1e2d3d;   /* subtle borders */
+  --text:       #e2e8f0;   /* primary text */
+  --text-muted: #7a93a8;   /* secondary / label text */
+  --accent:     #00c8ff;   /* cyan highlight / links */
+}
+```
+
+Change any token to restyle the entire page.
+
+---
+
+## Deployment
+
+The site deploys automatically via **GitHub Pages** from the `master` branch root. No build process — changes to `index.html` or `styles.css` go live on push.
+
+Make sure GitHub Pages is configured to serve from: **Branch: `master` / Root (`/`)**
+
+---
+
+## Stack
+
+- Plain HTML5 + CSS3 (no framework, no bundler)
+- [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) via Google Fonts
+- Zero JavaScript — fully static, instant load
+
