@@ -20,6 +20,7 @@
   --font:        'JetBrains Mono', 'Courier New', monospace;
   --max-w:       1000px;
   --gap:         2rem;
+  --bg-nav:      rgba(11, 15, 20, 0.92);
 }
 
 html {
@@ -67,7 +68,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 15, 20, 0.92);
+  background: var(--bg-nav);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   padding: 0.9rem 0;
@@ -217,6 +218,10 @@ nav {
   align-items: baseline;
   gap: 0.8rem;
   margin-bottom: 2.5rem;
+}
+
+.section-header-center {
+  justify-content: center;
 }
 
 .section-tag {
