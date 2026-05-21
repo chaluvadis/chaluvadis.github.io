@@ -20,10 +20,9 @@
 </head>
 <body>
 
-<!-- ── Nav ───────────────────────────────────────────────────── -->
 <nav>
   <div class="nav-inner">
-    <span class="nav-brand">chaluvadis.github.io</span>
+    <a class="nav-brand" href="#hero">chaluvadis.github.io</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#systems">Systems</a></li>
@@ -33,270 +32,323 @@
   </div>
 </nav>
 
-<!-- ── Hero ──────────────────────────────────────────────────── -->
-<section id="hero">
-  <div class="container">
-    <p class="hero-label">Platform Engineering · DevSecOps · AI Infrastructure</p>
-    <h1 class="hero-name">Surendra<br>Chaluvadi</h1>
-    <p class="hero-tagline">
-      Backend and platform engineer building secure cloud systems,<br>
-      developer tooling, and AI-ready infrastructure.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="https://github.com/chaluvadis" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
-        ↗ GitHub
-      </a>
-      <a class="btn" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
-        ↗ LinkedIn
-      </a>
+<main>
+  <section id="hero">
+    <div class="container hero-shell">
+      <div class="hero-copy">
+        <p class="hero-label">Platform Engineering · DevSecOps · AI Infrastructure</p>
+        <h1 class="hero-name">Surendra Chaluvadi</h1>
+        <p class="hero-tagline">
+          Backend and platform engineer building secure cloud systems, developer tooling, and AI-ready infrastructure.
+        </p>
+        <p class="hero-summary">
+          I design the foundations teams build on: workload identity, Kubernetes platforms, backend systems, and developer workflows that stay reliable under real operational load.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/chaluvadis" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
+            ↗ GitHub
+          </a>
+          <a class="btn" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
+            ↗ LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Current focus areas">
+        <div class="hero-panel-block">
+          <span class="eyebrow">Current focus</span>
+          <ul class="hero-list">
+            <li>Secure platform primitives for cloud-native teams</li>
+            <li>Identity, secrets, and zero-trust delivery paths</li>
+            <li>AI-ready infrastructure that keeps developer ergonomics high</li>
+          </ul>
+        </div>
+        <div class="hero-panel-block hero-panel-block-accent">
+          <span class="eyebrow">Best fit</span>
+          <p>
+            Staff and senior backend/platform roles where architecture, security, and delivery discipline all matter.
+          </p>
+        </div>
+      </aside>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Proof strip ────────────────────────────────────────────── -->
-<section id="proof">
-  <div class="container">
-    <div class="proof-grid">
-      <div class="proof-item">
-        <div class="proof-value">15+</div>
-        <div class="proof-label">Years in production</div>
-      </div>
-      <div class="proof-item">
-        <div class="proof-value">100+</div>
-        <div class="proof-label">Open-source repos</div>
-      </div>
-      <div class="proof-item">
-        <div class="proof-value">K8s</div>
-        <div class="proof-label">Operators &amp; platforms</div>
-      </div>
-      <div class="proof-item">
-        <div class="proof-value">Zero-trust</div>
-        <div class="proof-label">Secrets &amp; identity</div>
-      </div>
-      <div class="proof-item">
-        <div class="proof-value">AI-ready</div>
-        <div class="proof-label">LLM infrastructure</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── About ─────────────────────────────────────────────────── -->
-<section id="about">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">01</span>
-      <h2 class="section-title">About</h2>
-    </div>
-    <div class="about-text">
-      <p>
-        I build the infrastructure layer that teams depend on — Kubernetes operators, secrets pipelines, cloud-native tooling, and AI workload platforms. My work lives close to the metal: deployment automation, workload identity, observability, and the developer experience that connects them.
-      </p>
-      <p>
-        15+ years across distributed systems, backend engineering, and cloud infrastructure. Recent emphasis on platform engineering patterns, zero-trust security, and AI-native developer workflows.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ── Featured systems ───────────────────────────────────────── -->
-<section id="systems">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">02</span>
-      <h2 class="section-title">Featured Systems</h2>
-    </div>
-    <div class="systems-grid">
-
-      <div class="system-card">
-        <div class="system-name">openbao-spire-integration</div>
-        <div class="system-desc">
-          Zero-trust Kubernetes architecture: SPIRE workload identity + OpenBao PKI. Short-lived credentials, identity-based access, multi-cluster trust federation.
+  <section id="proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <div class="proof-value">15+</div>
+          <div class="proof-label">Years in production systems</div>
         </div>
-        <div class="system-tags">
-          <span class="tag">Kubernetes</span>
-          <span class="tag">SPIFFE/SPIRE</span>
-          <span class="tag">PKI</span>
-          <span class="tag">Zero-trust</span>
+        <div class="proof-item">
+          <div class="proof-value">100+</div>
+          <div class="proof-label">Open-source repositories</div>
         </div>
-        <a class="system-link" href="https://github.com/chaluvadis/openbao-spire-integration" target="_blank" rel="noopener" aria-label="openbao-spire-integration repository (opens in new tab)">↗ github.com/chaluvadis/openbao-spire-integration</a>
-      </div>
-
-      <div class="system-card">
-        <div class="system-name">valkey-operator</div>
-        <div class="system-desc">
-          Kubernetes operator for Valkey cluster lifecycle management. Automated scaling, rolling upgrades, failover, TLS, and access control workflows.
+        <div class="proof-item">
+          <div class="proof-value">K8s</div>
+          <div class="proof-label">Operators, platforms, runtime tooling</div>
         </div>
-        <div class="system-tags">
-          <span class="tag">Go</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Operator</span>
-          <span class="tag">Redis-compatible</span>
+        <div class="proof-item">
+          <div class="proof-value">Zero-trust</div>
+          <div class="proof-label">Identity, PKI, secrets workflows</div>
         </div>
-        <a class="system-link" href="https://github.com/chaluvadis/valkey-operator" target="_blank" rel="noopener" aria-label="valkey-operator repository (opens in new tab)">↗ github.com/chaluvadis/valkey-operator</a>
-      </div>
-
-      <div class="system-card">
-        <div class="system-name">safe-to-send</div>
-        <div class="system-desc">
-          Security-focused email pre-flight tool that validates recipients, detects sensitive content, and prevents accidental data exposure before send.
+        <div class="proof-item">
+          <div class="proof-value">AI-ready</div>
+          <div class="proof-label">Inference and developer platform direction</div>
         </div>
-        <div class="system-tags">
-          <span class="tag">Security</span>
-          <span class="tag">Tooling</span>
-          <span class="tag">DLP</span>
-        </div>
-        <a class="system-link" href="https://github.com/chaluvadis/safe-to-send" target="_blank" rel="noopener" aria-label="safe-to-send repository (opens in new tab)">↗ github.com/chaluvadis/safe-to-send</a>
-      </div>
-
-      <div class="system-card">
-        <div class="system-name">di-navigator</div>
-        <div class="system-desc">
-          Developer tooling for navigating and visualizing dependency injection graphs. Reduces cognitive overhead when working with large .NET DI containers.
-        </div>
-        <div class="system-tags">
-          <span class="tag">.NET</span>
-          <span class="tag">Developer Tools</span>
-          <span class="tag">DI</span>
-        </div>
-        <a class="system-link" href="https://github.com/chaluvadis/di-navigator" target="_blank" rel="noopener" aria-label="di-navigator repository (opens in new tab)">↗ github.com/chaluvadis/di-navigator</a>
-      </div>
-
-      <div class="system-card">
-        <div class="system-name">chart-profile-visualizer</div>
-        <div class="system-desc">
-          Helm chart analysis and visualization tool. Surfaces configuration relationships, value overrides, and deployment topology for complex chart hierarchies.
-        </div>
-        <div class="system-tags">
-          <span class="tag">Helm</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Visualization</span>
-        </div>
-        <a class="system-link" href="https://github.com/chaluvadis/chart-profile-visualizer" target="_blank" rel="noopener" aria-label="chart-profile-visualizer repository (opens in new tab)">↗ github.com/chaluvadis/chart-profile-visualizer</a>
-      </div>
-
-      <div class="system-card">
-        <div class="system-name">postgres-schema-sync</div>
-        <div class="system-desc">
-          Schema migration and drift detection tool for PostgreSQL. Compares target and source schemas, generates safe migration scripts, and enforces schema contracts.
-        </div>
-        <div class="system-tags">
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Migrations</span>
-          <span class="tag">Schema-as-code</span>
-        </div>
-        <a class="system-link" href="https://github.com/chaluvadis/postgres-schema-sync" target="_blank" rel="noopener" aria-label="postgres-schema-sync repository (opens in new tab)">↗ github.com/chaluvadis/postgres-schema-sync</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Skills ─────────────────────────────────────────────────── -->
-<section id="skills">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">03</span>
-      <h2 class="section-title">Skills</h2>
-    </div>
-    <div class="skills-grid">
-
-      <div class="skill-group">
-        <div class="skill-group-name">Platform &amp; Cloud</div>
-        <ul class="skill-list">
-          <li>Kubernetes · Helm · Operators</li>
-          <li>AWS (EKS, Lambda, Aurora, S3)</li>
-          <li>Azure</li>
-          <li>Terraform · GitHub Actions</li>
-          <li>Docker · containerd</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-name">Security &amp; Identity</div>
-        <ul class="skill-list">
-          <li>SPIFFE / SPIRE</li>
-          <li>OpenBao / Vault · PKI</li>
-          <li>Zero-trust architecture</li>
-          <li>OPA / Gatekeeper</li>
-          <li>Sigstore · SBOM</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-name">Backend &amp; Tooling</div>
-        <ul class="skill-list">
-          <li>.NET / C#</li>
-          <li>TypeScript · Node.js</li>
-          <li>Python · FastAPI</li>
-          <li>PostgreSQL · Redis / Valkey</li>
-          <li>REST · gRPC</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-name">AI &amp; Observability</div>
-        <ul class="skill-list">
-          <li>vLLM · Ollama · llama.cpp</li>
-          <li>LLM inference platforms</li>
-          <li>Grafana · Prometheus · OTEL</li>
-          <li>KEDA · KubeArmor</li>
-          <li>MLOps patterns</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── GitHub ─────────────────────────────────────────────────── -->
-<section id="github">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">04</span>
-      <h2 class="section-title">Engineering Artifacts</h2>
-    </div>
-    <div class="github-text">
-      <p>
-        GitHub is where I ship real systems. Every repository reflects a deliberate engineering decision — not just code practice, but production patterns, architecture tradeoffs, and operational documentation.
-      </p>
-      <p>
-        The selected systems above represent a cross-section of platform, security, and tooling work. The full profile includes operators, CLI tools, observability configs, backend services, and AI infrastructure experiments.
-      </p>
-      <div class="github-cta">
-        <a class="btn btn-primary" href="https://github.com/chaluvadis" target="_blank" rel="noopener" aria-label="View full GitHub profile (opens in new tab)">
-          ↗ View full GitHub profile
-        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Contact ────────────────────────────────────────────────── -->
-<section id="contact">
-  <div class="container">
-    <div class="section-header section-header-center">
-      <span class="section-tag">05</span>
-      <h2 class="section-title">Get in Touch</h2>
+  <section id="about">
+    <div class="container section-shell">
+      <div class="section-heading">
+        <div class="section-header">
+          <span class="section-tag">01</span>
+          <h2 class="section-title">About</h2>
+        </div>
+        <p class="section-intro">
+          Recruiter-first snapshot: I build the infrastructure layer that keeps delivery fast, secure, and maintainable.
+        </p>
+      </div>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>
+            My work sits close to the platform edge: Kubernetes operators, secrets pipelines, cloud-native delivery tooling, and backend systems that teams rely on every day.
+          </p>
+          <p>
+            Across 15+ years in distributed systems and cloud engineering, I have focused on making complex environments easier to operate without trading away reliability, security, or clarity.
+          </p>
+        </div>
+        <div class="info-card">
+          <span class="eyebrow">What I optimize for</span>
+          <ul class="detail-list">
+            <li>Stable platform foundations with low operational drag</li>
+            <li>Security controls built into the delivery path</li>
+            <li>Developer tooling that removes repeated friction</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <p class="contact-intro">
-      Open to senior platform engineering, staff-level backend, and engineering leadership roles. Prefer teams building systems with real operational complexity.
-    </p>
-    <div class="contact-links">
-      <a class="btn btn-primary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
-        ↗ LinkedIn
-      </a>
-      <a class="btn" href="https://github.com/chaluvadis" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
-        ↗ GitHub
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
+  <section id="systems">
+    <div class="container section-shell">
+      <div class="section-heading">
+        <div class="section-header">
+          <span class="section-tag">02</span>
+          <h2 class="section-title">Featured Systems</h2>
+        </div>
+        <p class="section-intro">
+          Selected projects that show platform engineering, security architecture, and production-minded tooling.
+        </p>
+      </div>
+      <div class="systems-grid">
+        <article class="system-card">
+          <div class="system-name">openbao-spire-integration</div>
+          <div class="system-desc">
+            Zero-trust Kubernetes reference architecture combining SPIRE workload identity with OpenBao PKI for short-lived credentials and federated trust.
+          </div>
+          <div class="system-tags">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">SPIFFE/SPIRE</span>
+            <span class="tag">PKI</span>
+            <span class="tag">Zero-trust</span>
+          </div>
+          <a class="system-link" href="https://github.com/chaluvadis/openbao-spire-integration" target="_blank" rel="noopener" aria-label="openbao-spire-integration repository (opens in new tab)">↗ github.com/chaluvadis/openbao-spire-integration</a>
+        </article>
+
+        <article class="system-card">
+          <div class="system-name">valkey-operator</div>
+          <div class="system-desc">
+            Kubernetes operator for Valkey lifecycle management with scaling, controlled rollouts, failover, TLS, and access policy automation.
+          </div>
+          <div class="system-tags">
+            <span class="tag">Go</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Operator</span>
+            <span class="tag">Stateful systems</span>
+          </div>
+          <a class="system-link" href="https://github.com/chaluvadis/valkey-operator" target="_blank" rel="noopener" aria-label="valkey-operator repository (opens in new tab)">↗ github.com/chaluvadis/valkey-operator</a>
+        </article>
+
+        <article class="system-card">
+          <div class="system-name">safe-to-send</div>
+          <div class="system-desc">
+            Email pre-flight security tool that checks recipients, flags sensitive content, and reduces the chance of accidental data disclosure.
+          </div>
+          <div class="system-tags">
+            <span class="tag">Security</span>
+            <span class="tag">Tooling</span>
+            <span class="tag">DLP</span>
+          </div>
+          <a class="system-link" href="https://github.com/chaluvadis/safe-to-send" target="_blank" rel="noopener" aria-label="safe-to-send repository (opens in new tab)">↗ github.com/chaluvadis/safe-to-send</a>
+        </article>
+
+        <article class="system-card">
+          <div class="system-name">di-navigator</div>
+          <div class="system-desc">
+            Developer tool for exploring dependency injection graphs in large .NET applications so teams can understand service wiring faster.
+          </div>
+          <div class="system-tags">
+            <span class="tag">.NET</span>
+            <span class="tag">Developer tools</span>
+            <span class="tag">Architecture</span>
+          </div>
+          <a class="system-link" href="https://github.com/chaluvadis/di-navigator" target="_blank" rel="noopener" aria-label="di-navigator repository (opens in new tab)">↗ github.com/chaluvadis/di-navigator</a>
+        </article>
+
+        <article class="system-card">
+          <div class="system-name">chart-profile-visualizer</div>
+          <div class="system-desc">
+            Helm analysis and visualization tool that surfaces configuration relationships, value overrides, and deployment topology in complex charts.
+          </div>
+          <div class="system-tags">
+            <span class="tag">Helm</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Visualization</span>
+          </div>
+          <a class="system-link" href="https://github.com/chaluvadis/chart-profile-visualizer" target="_blank" rel="noopener" aria-label="chart-profile-visualizer repository (opens in new tab)">↗ github.com/chaluvadis/chart-profile-visualizer</a>
+        </article>
+
+        <article class="system-card">
+          <div class="system-name">postgres-schema-sync</div>
+          <div class="system-desc">
+            PostgreSQL schema drift and migration workflow focused on safer change management, contract enforcement, and repeatable database delivery.
+          </div>
+          <div class="system-tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Migrations</span>
+            <span class="tag">Schema-as-code</span>
+          </div>
+          <a class="system-link" href="https://github.com/chaluvadis/postgres-schema-sync" target="_blank" rel="noopener" aria-label="postgres-schema-sync repository (opens in new tab)">↗ github.com/chaluvadis/postgres-schema-sync</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container section-shell">
+      <div class="section-heading">
+        <div class="section-header">
+          <span class="section-tag">03</span>
+          <h2 class="section-title">Skills</h2>
+        </div>
+        <p class="section-intro">
+          Capabilities grouped by the systems I build and support rather than by a flat keyword list.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-name">Platform &amp; Cloud</div>
+          <ul class="skill-list">
+            <li>Kubernetes · Helm · Operators</li>
+            <li>AWS (EKS, Lambda, Aurora, S3)</li>
+            <li>Azure</li>
+            <li>Terraform · GitHub Actions</li>
+            <li>Docker · containerd</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Security &amp; Identity</div>
+          <ul class="skill-list">
+            <li>SPIFFE / SPIRE</li>
+            <li>OpenBao / Vault · PKI</li>
+            <li>Zero-trust architecture</li>
+            <li>OPA / Gatekeeper</li>
+            <li>Sigstore · SBOM</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Backend &amp; Tooling</div>
+          <ul class="skill-list">
+            <li>.NET / C#</li>
+            <li>TypeScript · Node.js</li>
+            <li>Python · FastAPI</li>
+            <li>PostgreSQL · Redis / Valkey</li>
+            <li>REST · gRPC</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">AI &amp; Observability</div>
+          <ul class="skill-list">
+            <li>vLLM · Ollama · llama.cpp</li>
+            <li>LLM inference platforms</li>
+            <li>Grafana · Prometheus · OTEL</li>
+            <li>KEDA · KubeArmor</li>
+            <li>MLOps patterns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="github">
+    <div class="container github-layout">
+      <div class="section-shell">
+        <div class="section-heading">
+          <div class="section-header">
+            <span class="section-tag">04</span>
+            <h2 class="section-title">Engineering Artifacts</h2>
+          </div>
+          <p class="section-intro">
+            GitHub is the best place to verify how I think: shipped systems, architecture tradeoffs, and implementation quality.
+          </p>
+        </div>
+        <div class="github-text">
+          <p>
+            The repositories above are a deliberate slice of platform, security, and developer tooling work. They show how I structure systems that need to be maintainable beyond the first release.
+          </p>
+          <p>
+            The broader profile includes operators, internal tools, observability setups, backend services, and AI infrastructure experiments with a clear systems bias.
+          </p>
+          <div class="github-cta">
+            <a class="btn btn-primary" href="https://github.com/chaluvadis" target="_blank" rel="noopener" aria-label="View full GitHub profile (opens in new tab)">
+              ↗ View full GitHub profile
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="github-stat-card" aria-label="Engineering snapshot">
+        <div class="stat-label">Snapshot</div>
+        <div class="stat-row"><span>Bias</span><strong>Platform-first</strong></div>
+        <div class="stat-row"><span>Strength</span><strong>Secure delivery systems</strong></div>
+        <div class="stat-row"><span>Stacks</span><strong>.NET · Go · TS · Python</strong></div>
+        <div class="stat-row"><span>Focus</span><strong>Cloud, identity, AI infra</strong></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div class="section-header section-header-center">
+          <span class="section-tag">05</span>
+          <h2 class="section-title">Get in Touch</h2>
+        </div>
+        <p class="contact-intro">
+          Open to senior platform engineering, staff-level backend, and engineering leadership roles — especially teams working on systems with real operational complexity.
+        </p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
+            ↗ LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/chaluvadis" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
+            ↗ GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer>
   <div class="container">
-    <p>Surendra Chaluvadi · chaluvadis.github.io · Built with plain HTML &amp; CSS</p>
+    <p>Surendra Chaluvadi · Warm, static, recruiter-first landing page built with plain HTML &amp; CSS</p>
   </div>
 </footer>
 
