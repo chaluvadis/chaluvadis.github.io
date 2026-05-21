@@ -19,6 +19,9 @@
   --text-soft: #a6917f;
   --accent: #d8a66c;
   --accent-strong: #ebb77a;
+  --accent-ink: #fff2de;
+  --accent-ink-strong: #fff6ea;
+  --tag-text: #e5c9a5;
   --panel-fill: linear-gradient(180deg, rgba(63, 47, 39, 0.5), rgba(39, 29, 24, 0.92));
   --shadow: 0 24px 60px rgba(7, 4, 2, 0.32);
   --radius-lg: 28px;
@@ -26,6 +29,7 @@
   --radius-sm: 14px;
   --font: 'JetBrains Mono', 'Courier New', monospace;
   --max-w: 1120px;
+  --copy-width: 40rem;
 }
 
 html {
@@ -191,12 +195,12 @@ nav {
   font-size: clamp(1rem, 2.1vw, 1.28rem);
   line-height: 1.7;
   color: var(--text-muted);
-  max-width: 40rem;
+  max-width: var(--copy-width);
 }
 
 .hero-summary {
   margin-top: 1.1rem;
-  max-width: 38rem;
+  max-width: var(--copy-width);
   color: var(--text-soft);
 }
 
@@ -236,13 +240,13 @@ nav {
 .btn-primary {
   background: linear-gradient(135deg, rgba(216, 166, 108, 0.24), rgba(92, 66, 43, 0.92));
   border-color: rgba(235, 183, 122, 0.42);
-  color: #fff2de;
+  color: var(--accent-ink);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
   background: linear-gradient(135deg, rgba(235, 183, 122, 0.32), rgba(105, 72, 47, 0.96));
-  color: #fff6ea;
+  color: var(--accent-ink-strong);
 }
 
 .hero-panel {
@@ -386,7 +390,7 @@ nav {
   gap: 1rem;
   font-size: 0.95rem;
   line-height: 1.95;
-  max-width: 42rem;
+  max-width: var(--copy-width);
 }
 
 .info-card {
@@ -440,7 +444,7 @@ nav {
   border-radius: 999px;
   border: 1px solid rgba(214, 186, 158, 0.14);
   background: rgba(24, 18, 15, 0.52);
-  color: #e5c9a5;
+  color: var(--tag-text);
   font-size: 0.67rem;
   letter-spacing: 0.04em;
 }
