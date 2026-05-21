@@ -1,74 +1,60 @@
 # chaluvadis.github.io
 
-Personal engineering landing page for **Surendra Chaluvadi** — backend and platform engineer building secure cloud systems, developer tooling, and AI-ready infrastructure.
+Static personal landing page for **Surendra Chaluvadi** — backend and platform engineer building secure cloud systems, developer tooling, and AI-ready infrastructure.
 
----
+## Design direction
 
-## What this site is
+This version keeps the recruiter-first structure but shifts the visual system to a warmer, calmer dark theme:
 
-A recruiter-optimized, static landing page that communicates engineering identity in under 10 seconds. Designed as a modern engineering product page — not a resume, not a generic portfolio.
+- Deep espresso / charcoal backgrounds
+- Warm sand surfaces and softer borders
+- Amber / muted gold accents
+- JetBrains Mono used with more spacing, contrast, and softer card treatment
 
-The page is the source of truth for:
-- Who I am and what I build
-- Featured open-source systems and tooling
-- Skill groups organized by domain
-- Links to GitHub and LinkedIn for direct contact
+## Site structure
 
----
-
-## Site sections
-
-| Section | Purpose |
-|---|---|
-| **Hero** | Name, positioning, GitHub / LinkedIn CTAs |
-| **Proof strip** | Compact row of career and output proof points |
-| **About** | 2-paragraph engineering identity summary |
-| **Featured Systems** | Curated repos — operators, security tooling, platform tools |
-| **Skills** | Domain-grouped: Platform/Cloud, Security/Identity, Backend/Tooling, AI/Observability |
-| **Engineering Artifacts** | Context on GitHub as an engineering artifact system |
-| **Contact** | Role fit statement + direct CTA links |
-
----
+- **Hero** — positioning, CTA, and current focus
+- **Proof strip** — fast credibility scan
+- **About** — concise engineering summary
+- **Featured Systems** — strongest platform, security, and tooling projects
+- **Skills** — grouped by systems domain
+- **Engineering Artifacts** — GitHub context and snapshot
+- **Contact** — role fit and direct links
 
 ## Customization
 
 ### `index.html`
-All content lives directly in the HTML — no build step required. To update:
-- **Hero tagline** — edit the `<p class="hero-tagline">` block
-- **Proof strip numbers** — edit `<div class="proof-value">` values
-- **Featured systems** — each `<div class="system-card">` is self-contained; add, remove, or edit cards directly
-- **Skills** — each `<div class="skill-group">` block contains a `<ul class="skill-list">`
-- **Contact message** — edit `<p class="contact-intro">`
+Edit content directly in the markup. The main customization points are:
+
+- hero copy and focus list
+- proof items
+- featured system cards
+- skills groups
+- GitHub snapshot rows
+- contact copy
 
 ### `styles.css`
-Design tokens are defined as CSS custom properties in `:root` at the top of the file:
+The site is driven by CSS tokens in `:root`. The most important ones are:
 
 ```css
 :root {
-  --bg:         #0b0f14;   /* page background */
-  --surface:    #111820;   /* card / panel surface */
-  --border:     #1e2d3d;   /* subtle borders */
-  --text:       #e2e8f0;   /* primary text */
-  --text-muted: #7a93a8;   /* secondary / label text */
-  --accent:     #00c8ff;   /* cyan highlight / links */
+  --bg: #1a1411;
+  --surface: rgba(43, 33, 28, 0.88);
+  --border: rgba(214, 186, 158, 0.18);
+  --text: #f5ede4;
+  --text-muted: #c8b8a7;
+  --accent: #d8a66c;
 }
 ```
 
-Change any token to restyle the entire page.
-
----
+Adjust these tokens first to retheme the full page. Surface radius, shadows, and layout width are also centralized near the top of the file.
 
 ## Deployment
 
-The site deploys automatically via **GitHub Pages** from the `master` branch root. No build process — changes to `index.html` or `styles.css` go live on push.
-
-Make sure GitHub Pages is configured to serve from: **Branch: `master` / Root (`/`)**
-
----
+GitHub Pages serves the site from the `master` branch root. There is no build step — updating `index.html` or `styles.css` is enough.
 
 ## Stack
 
-- Plain HTML5 + CSS3 (no framework, no bundler)
+- Plain HTML5 + CSS3
 - [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) via Google Fonts
-- Zero JavaScript — fully static, instant load
-
+- Zero JavaScript
