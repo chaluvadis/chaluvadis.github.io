@@ -58,12 +58,14 @@ body::before {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-color: rgba(235, 183, 122, 0.42);
+  text-underline-offset: 0.2em;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration-color: currentColor;
 }
 
 main,
@@ -108,6 +110,7 @@ nav {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text);
+  text-decoration: none;
 }
 
 .nav-links {
@@ -121,6 +124,7 @@ nav {
   font-size: 0.74rem;
   color: var(--text-soft);
   letter-spacing: 0.04em;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
@@ -217,6 +221,7 @@ nav {
   font: inherit;
   font-size: 0.8rem;
   font-weight: 500;
+  text-decoration: none;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
@@ -442,7 +447,7 @@ nav {
 
 .system-link {
   font-size: 0.76rem;
-  color: var(--text-soft);
+  color: var(--accent-strong);
 }
 
 .system-link:hover,
