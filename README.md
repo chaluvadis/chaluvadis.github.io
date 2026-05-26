@@ -1,60 +1,149 @@
 # chaluvadis.github.io
 
-Static personal landing page for **Surendra Chaluvadi** — backend and platform engineer building secure cloud systems, developer tooling, and AI-ready infrastructure.
+Personal site for **Surendra Chaluvadi** — a platform and backend engineer building secure cloud systems, developer tooling, and AI-safe engineering workflows.
+
+---
+
+## What this site is
+
+A recruiter-first engineering landing page designed to communicate identity, systems focus, and technical direction in under 10 seconds.
+
+This site is intentionally built as:
+- a **product-style engineering brand page**
+- not a resume
+- not a generic portfolio
+- not a blog
+
+It acts as the public entry point for:
+- platform and backend positioning
+- selected GitHub systems and tooling
+- core engineering strengths
+- direct GitHub and LinkedIn navigation
+
+---
+
+## Site sections
+
+| Section | Purpose |
+|---|---|
+| **Hero** | Clear identity, positioning, and primary calls to action |
+| **Proof strip** | Fast recruiter-readable proof of experience and focus |
+| **About** | Short explanation of engineering scope and systems mindset |
+| **Featured Systems** | Curated repositories that best represent platform, backend, and tooling work |
+| **Skills** | Grouped by systems built, not keyword stuffing |
+| **GitHub as Artifact System** | Explains how repositories reflect engineering quality and leverage |
+| **Contact** | Clear CTA for hiring or professional outreach |
+
+---
 
 ## Design direction
 
-This version keeps the recruiter-first structure but shifts the visual system to a warmer, calmer dark theme:
+The visual system is designed to feel:
+- modern
+- minimal
+- technical
+- calm
+- recruiter-readable
 
-- Deep espresso / charcoal backgrounds
-- Warm sand surfaces and softer borders
-- Amber / muted gold accents
-- JetBrains Mono used with more spacing, contrast, and softer card treatment
+### Design principles
+- dark-first interface
+- JetBrains Mono typography
+- high whitespace
+- subtle card surfaces
+- soft contrast
+- warm premium palette
+- no unnecessary animation
+- fully static and maintainable
 
-## Site structure
+### Core style tokens
 
-- **Hero** — positioning, CTA, and current focus
-- **Proof strip** — fast credibility scan
-- **About** — concise engineering summary
-- **Featured Systems** — strongest platform, security, and tooling projects
-- **Skills** — grouped by systems domain
-- **Engineering Artifacts** — GitHub context and snapshot
-- **Contact** — role fit and direct links
+```css
+:root {
+  --bg:        #15110f;
+  --surface:   #1d1714;
+  --surface-2: #241d19;
+  --border:    rgba(215, 155, 91, 0.18);
+  --text:      #f4e9dc;
+  --muted:     #b9a897;
+  --accent:    #d79b5b;
+  --accent-2:  #e7bf8b;
+}
+```
+
+These tokens are defined in `styles.css` and can be adjusted to restyle the entire site.
+
+---
 
 ## Customization
 
 ### `index.html`
-Edit content directly in the markup. The main customization points are:
+All site content lives directly in the HTML. No build step is required.
 
-- hero copy and focus list
-- proof items
-- featured system cards
-- skills groups
-- GitHub snapshot rows
-- contact copy
+Most common edits:
+- **Hero positioning** — update headline and intro copy
+- **Proof strip** — adjust experience / focus statements
+- **Featured Systems** — update project cards and repository links
+- **Skills** — revise grouped capabilities based on current focus
+- **Contact section** — update outreach message or CTA links
 
 ### `styles.css`
-The site is driven by CSS tokens in `:root`. The most important ones are:
+Use `styles.css` to adjust:
+- color tokens
+- spacing
+- card surfaces
+- typography rhythm
+- layout responsiveness
 
-```css
-:root {
-  --bg: #1a1411;
-  --surface: rgba(43, 33, 28, 0.88);
-  --border: rgba(214, 186, 158, 0.18);
-  --text: #f5ede4;
-  --text-muted: #c8b8a7;
-  --accent: #d8a66c;
-}
-```
+The page is intentionally simple so future edits can happen quickly without a framework or bundler.
 
-Adjust these tokens first to retheme the full page. Surface radius, shadows, and layout width are also centralized near the top of the file.
+---
 
 ## Deployment
 
-GitHub Pages serves the site from the `master` branch root. There is no build step — updating `index.html` or `styles.css` is enough.
+The site deploys through **GitHub Pages** from the repository root on the `master` branch.
+
+### Expected setup
+- **Branch:** `master`
+- **Folder:** `/ (root)`
+
+Because the site is plain HTML and CSS, changes go live directly when pushed.
+
+---
 
 ## Stack
 
-- Plain HTML5 + CSS3
-- [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) via Google Fonts
-- Zero JavaScript
+- HTML5
+- CSS3
+- JetBrains Mono via Google Fonts
+- No framework
+- No bundler
+- No JavaScript required for core rendering
+
+---
+
+## Content strategy
+
+This site is optimized around one idea:
+
+> GitHub is the engineering artifact system.  
+> The website is the recruiter-facing summary layer.
+
+That means the page should stay:
+- concise
+- curated
+- proof-driven
+- aligned with the strongest repositories only
+
+---
+
+## Recommended adjacent updates
+
+For best results, align this site with:
+- GitHub profile bio
+- pinned repositories
+- GitHub profile README
+- LinkedIn headline and About section
+
+Suggested positioning line:
+
+**Platform and backend engineer building secure cloud systems, developer tooling, and AI-safe engineering workflows.**
