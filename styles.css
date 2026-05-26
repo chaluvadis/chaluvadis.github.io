@@ -1,18 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap');
 
 :root {
-  --bg: #15110f;
-  --surface: #1d1714;
-  --surface-2: #241d19;
-  --border: rgba(215, 155, 91, 0.18);
+  --font: 'JetBrains Mono', monospace;
+  --radius: 20px;
+  --max-width: 1120px;
+  --transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f0c0a;
+  --surface: #1a1613;
+  --surface-2: #231d19;
+  --border: rgba(215, 155, 91, 0.15);
   --text: #f4e9dc;
-  --muted: #b9a897;
+  --text-secondary: #c9b8a7;
+  --muted: #a59685;
   --accent: #d79b5b;
   --accent-2: #e7bf8b;
   --shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
-  --radius: 20px;
-  --max-width: 1120px;
-  --font: 'JetBrains Mono', monospace;
+}
+
+:root[data-theme="light"] {
+  --bg: #fdfcfb;
+  --surface: #ffffff;
+  --surface-2: #f8f5f2;
+  --border: rgba(180, 130, 75, 0.25);
+  --text: #1a1612;
+  --text-secondary: #4a4035;
+  --muted: #6b5f52;
+  --accent: #b86a2e;
+  --accent-2: #c97b38;
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
 }
 
 *,
@@ -28,13 +46,12 @@ html {
 body {
   margin: 0;
   font-family: var(--font);
-  background:
-    radial-gradient(circle at top, rgba(215, 155, 91, 0.08), transparent 28%),
-    var(--bg);
+  background: radial-gradient(circle at top, rgba(215, 155, 91, 0.06), transparent 28%), var(--bg);
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: var(--transition);
 }
 
 a {
@@ -51,9 +68,10 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(21, 17, 15, 0.78);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 5%, transparent);
+  transition: var(--transition);
 }
 
 .nav {
@@ -68,6 +86,7 @@ a {
   font-weight: 800;
   letter-spacing: 0.08em;
   color: var(--accent-2);
+  transition: color 0.3s ease;
 }
 
 .nav-links {
@@ -79,11 +98,36 @@ a {
 .nav-links a {
   color: var(--muted);
   font-size: 0.92rem;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
 .text-link:hover {
   color: var(--accent-2);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-2);
+  border-color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
 }
 
 .hero {
@@ -148,7 +192,8 @@ a {
   border-radius: 999px;
   border: 1px solid var(--border);
   font-weight: 700;
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  transition: all 0.15s ease;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -162,15 +207,16 @@ a {
 }
 
 .button-secondary {
-  background: rgba(255, 255, 255, 0.015);
+  background: color-mix(in srgb, var(--text) 3%, transparent);
   color: var(--text);
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+  background: color-mix(in srgb, var(--text) 2%, transparent);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 .hero-panel {
@@ -179,7 +225,7 @@ a {
 
 .panel-item {
   padding: 0.95rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 6%, transparent);
 }
 
 .panel-item:last-child {
