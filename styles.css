@@ -307,7 +307,7 @@ a {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* Terminal Window */
