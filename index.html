@@ -14,8 +14,11 @@
   <meta property="og:description" content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code." />
   <meta name="twitter:title" content="Nomad In Code — Surendra Chaluvadi" />
   <meta name="twitter:description" content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code." />
+  <meta property="og:image" content="/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/og-image.svg" />
   <link rel="canonical" href="https://chaluvadis.github.io" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-terminal.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,11 +40,20 @@
         <a href="#contact">contact</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <svg id="themeIcon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21.752 15.002A9.718 9.718 0 0112 21.75c-5.385 0-9.75-4.365-9.75-9.75 0-4.793 3.657-8.718 8.386-9.582a.75.75 0 01.9.71v1.5a.75.75 0 01-.75.75C7.425 8.25 5.25 10.425 5.25 13.5c0 2.993 2.453 5.453 5.453 5.5.253.004.503-.03.747-.097a.75.75 0 01.552 1.392A6.958 6.958 0 0112 20.25c-3.862 0-7.02-3.04-7.02-6.75 0-3.447 2.653-6.297 6.047-6.297.155 0 .31.007.465.021a.75.75 0 01-.068 1.495 5.497 5.497 0 00-5.46-4.771c0 2.572 2.066 4.65 4.65 4.65h1.5a.75.75 0 01.75.75v1.5a.75.75 0 01-.71.75z"/>
-        </svg>
+        <span id="themeIconText">&gt;</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile primary">
+      <a href="#about">about</a>
+      <a href="#systems">projects</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </nav>
   </header>
 
   <main id="top">
@@ -245,6 +257,23 @@
       </div>
     </section>
 
+    <!-- Currently Learning -->
+    <section class="section learning">
+      <div class="container">
+        <div class="learning-card reveal">
+          <span class="section-tag"># now_learning</span>
+          <div class="learning-content">
+            <span class="learning-prompt">&gt; echo $CURRENTLY_LEARNING</span>
+            <span class="learning-items">
+              <span class="learning-item">Rust</span>
+              <span class="learning-item">WebAssembly</span>
+              <span class="learning-item">eBPF</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills -->
     <section class="section skills" id="skills">
       <div class="container">
@@ -321,6 +350,7 @@
       <div class="footer-content">
         <span class="footer-prompt">&gt; nomad_in_code</span>
         <span class="footer-text">built with plain html + css · no framework · no bundler</span>
+        <span class="footer-year" id="footerYear"></span>
       </div>
     </div>
   </footer>
@@ -333,8 +363,8 @@
       const toggle = document.getElementById('themeToggle');
       const icon = document.getElementById('themeIcon');
 
-      const sunIcon = '<path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM12 18.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01-.75.75zm7.255-10.5a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zm-15 0a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zm12.389 6.364a.75.75 0 011.06 0l-1.59 1.59a.75.75 0 01-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zm-12.389 0a.75.75 0 010 1.06l-1.59 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zm12.389-6.364a.75.75 0 01-1.06 0l-1.59-1.59a.75.75 0 011.06-1.06l1.59 1.59a.75.75 0 010 1.06z"/>';
-      const moonIcon = '<path d="M21.752 15.002A9.718 9.718 0 0112 21.75c-5.385 0-9.75-4.365-9.75-9.75 0-4.793 3.657-8.718 8.386-9.582a.75.75 0 01.9.71v1.5a.75.75 0 01-.75.75C7.425 8.25 5.25 10.425 5.25 13.5c0 2.993 2.453 5.453 5.453 5.5.253.004.503-.03.747-.097a.75.75 0 01.552 1.392A6.958 6.958 0 0112 20.25c-3.862 0-7.02-3.04-7.02-6.75 0-3.447 2.653-6.297 6.047-6.297.155 0 .31.007.465.021a.75.75 0 01-.068 1.495 5.497 5.497 0 00-5.46-4.771c0 2.572 2.066 4.65 4.65 4.65h1.5a.75.75 0 01.75.75v1.5a.75.75 0 01-.71.75z"/>';
+      const lightIcon = '&lt;/';
+      const darkIcon = '&gt;';
 
       function getTimeBasedTheme() {
         const hour = new Date().getHours();
@@ -343,7 +373,8 @@
 
       function setTheme(theme) {
         root.setAttribute(THEME_ATTR, theme);
-        icon.innerHTML = theme === 'light' ? sunIcon : moonIcon;
+        const themeText = document.getElementById('themeIconText');
+        if (themeText) themeText.innerHTML = theme === 'light' ? lightIcon : darkIcon;
         if (theme !== 'auto') {
           localStorage.setItem(STORAGE_KEY, theme);
         } else {
@@ -385,6 +416,28 @@
         const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
         progressBar.style.width = progress + '%';
       });
+
+      // Footer year (auto-updating)
+      const footerYear = document.getElementById('footerYear');
+      if (footerYear) footerYear.textContent = '© ' + new Date().getFullYear();
+
+      // Mobile nav toggle
+      const hamburger = document.getElementById('hamburger');
+      const mobileNav = document.getElementById('mobileNav');
+      if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', function() {
+          hamburger.classList.toggle('active');
+          const isOpen = mobileNav.style.display === 'block';
+          mobileNav.style.display = isOpen ? 'none' : 'block';
+        });
+        // Close mobile nav on link click
+        mobileNav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            mobileNav.style.display = 'none';
+          });
+        });
+      }
 
       // Scroll reveal
       const reveals = document.querySelectorAll('.reveal');
