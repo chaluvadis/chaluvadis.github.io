@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Surendra Chaluvadi — Platform Engineer</title>
+  <title>Surendra Chaluvadi — Staff Platform &amp; Backend Engineer</title>
   <meta name="theme-color" content="#0a0806" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
   <meta
     name="description"
-    content="Staff-level platform & backend engineer. Building Kubernetes operators, zero-trust security systems, and developer tooling. 15+ years shipping infrastructure."
+    content="Staff-level platform &amp; backend engineer with 15+ years. Kubernetes operators, zero-trust security, OpenBao, SPIRE, and developer tooling. 295 open-source repos."
   />
   <meta name="keywords" content="platform engineering, backend engineer, Kubernetes, zero-trust, SPIRE, OpenBao, developer tooling, VS Code extensions, Go, C#, Python" />
   <meta name="author" content="Surendra Chaluvadi" />
@@ -17,19 +17,23 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Surendra Chaluvadi" />
-  <meta property="og:title" content="Surendra Chaluvadi — Platform Engineer" />
-  <meta property="og:description" content="Staff-level platform & backend engineer. Building Kubernetes operators, zero-trust security systems, and developer tooling." />
+  <meta property="og:title" content="Surendra Chaluvadi — Staff Platform &amp; Backend Engineer" />
+  <meta property="og:description" content="Staff-level platform &amp; backend engineer with 15+ years. Kubernetes, zero-trust security, OpenBao, SPIRE, and developer tooling." />
   <meta property="og:url" content="https://chaluvadis.github.io" />
   <meta property="og:image" content="/og-image.svg" />
+  <meta property="og:image:alt" content="Surendra Chaluvadi — Staff Platform &amp; Backend Engineer portfolio preview" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Surendra Chaluvadi — Platform Engineer" />
-  <meta name="twitter:description" content="Staff-level platform & backend engineer. Building Kubernetes operators, zero-trust security systems, and developer tooling." />
+  <meta name="twitter:site" content="@chaluvadis" />
+  <meta name="twitter:creator" content="@chaluvadis" />
+  <meta name="twitter:title" content="Surendra Chaluvadi — Staff Platform &amp; Backend Engineer" />
+  <meta name="twitter:description" content="Staff-level platform &amp; backend engineer with 15+ years. Kubernetes, zero-trust security, OpenBao, SPIRE, and developer tooling." />
   <meta name="twitter:image" content="/og-image.svg" />
   <link rel="canonical" href="https://chaluvadis.github.io" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="icon" type="image/svg+xml" href="/favicon-terminal.svg" />
+  <link rel="icon" type="image/png" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,6 +71,13 @@
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "professional experience",
       "description": "15+ years in platform and backend engineering"
+    },
+    "email": "chaluvadis@gmail.com",
+    "image": "https://chaluvadis.github.io/og-image.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "employment inquiries",
+      "email": "chaluvadis@gmail.com"
     }
   }
   </script>
@@ -76,11 +87,17 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Surendra Chaluvadi — Platform Engineer",
+    "name": "Surendra Chaluvadi — Staff Platform &amp; Backend Engineer",
     "description": "Portfolio of Surendra Chaluvadi, a staff-level platform and backend engineer.",
     "url": "https://chaluvadis.github.io",
     "inLanguage": "en-US",
     "license": "https://creativecommons.org/licenses/by/4.0/",
+    "primaryImageOfPage": {
+      "@id": "https://chaluvadis.github.io/og-image.svg#image"
+    },
+    "isPartOf": {
+      "@id": "https://chaluvadis.github.io/#website"
+    },
     "about": {
       "@type": "Person",
       "name": "Surendra Chaluvadi"
@@ -108,7 +125,7 @@
         <a href="#contact">contact</a>
       </nav>
       <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Toggle theme">
-        <span id="themeIconText">&gt;</span>
+        <span id="themeIconText" aria-hidden="true">&gt;</span>
       </button>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -124,17 +141,23 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
+        <!-- Hero Title -->
+        <h1 class="hero-title reveal">
+          Surendra Chaluvadi
+          <span class="hero-subtitle">Staff Platform &amp; Backend Engineer</span>
+        </h1>
+
         <!-- Terminal -->
         <div class="terminal-window reveal" id="heroTerminal">
           <button class="skip-anim" id="skipAnim" aria-label="Skip animation">skip</button>
           <div class="terminal-bar">
-            <span class="terminal-dot"></span>
-            <span class="terminal-dot"></span>
-            <span class="terminal-dot"></span>
+            <span class="terminal-dot" aria-hidden="true"></span>
+            <span class="terminal-dot" aria-hidden="true"></span>
+            <span class="terminal-dot" aria-hidden="true"></span>
             <span class="terminal-title">nomad@portfolio</span>
           </div>
           <div class="terminal-body">
@@ -178,7 +201,7 @@
         <!-- Avatar -->
         <div class="hero-visual reveal">
           <div class="avatar-frame">
-            <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" loading="lazy" decoding="async" />
+            <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" width="100" height="100" decoding="async" fetchpriority="high" />
           </div>
         </div>
       </div>
@@ -187,11 +210,11 @@
     <!-- About -->
     <section class="section about" id="about">
       <div class="container">
-        <div class="about-layout">
-          <div class="about-tag reveal">
-            <span class="section-tag"># about</span>
-          </div>
-          <div class="about-body reveal">
+        <div class="section-header reveal">
+          <span class="section-tag" aria-hidden="true"># about</span>
+          <h2 class="section-title" id="about">about.</h2>
+        </div>
+        <div class="about-body reveal">
             <p class="about-lead">
               Staff-level platform &amp; backend engineer with 15+ years building infrastructure that helps teams ship software with less friction. Backend APIs, developer tooling, platform workflows, workload identity, and deployment systems.
             </p>
@@ -202,7 +225,6 @@
               My focus areas are zero-trust infrastructure, developer experience, and cloud operations. I work across Kubernetes, .NET, TypeScript, Go, and Python.
             </p>
           </div>
-        </div>
       </div>
     </section>
 
@@ -210,7 +232,7 @@
     <section class="section projects" id="systems">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag"># projects</span>
+          <span class="section-tag" aria-hidden="true"># projects</span>
           <h2 class="section-title">things I've built.</h2>
         </div>
 
@@ -318,7 +340,7 @@
     <section class="section impact" id="impact">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag"># impact</span>
+          <span class="section-tag" aria-hidden="true"># impact</span>
           <h2 class="section-title">by the numbers.</h2>
         </div>
 
@@ -343,7 +365,7 @@
     <section class="section skills" id="skills">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag"># skills</span>
+          <span class="section-tag" aria-hidden="true"># skills</span>
           <h2 class="section-title">tools in the toolbox.</h2>
         </div>
 
@@ -392,7 +414,7 @@
     <section class="section contact" id="contact">
       <div class="container">
         <div class="contact-card reveal">
-          <span class="section-tag"># contact</span>
+          <span class="section-tag" aria-hidden="true"># contact</span>
           <h2 class="section-title">let's build something.</h2>
           <p class="contact-text">
             I'm open to conversations around backend infrastructure, platform engineering, Kubernetes, and developer tooling.
@@ -452,7 +474,7 @@
   <!-- Back to top button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
-  <script>
+  <script defer>
     (function() {
       const STORAGE_KEY = 'theme-preference';
       const THEME_ATTR = 'data-theme';
@@ -523,7 +545,7 @@
           });
           ticking = true;
         }
-      });
+      }, { passive: true });
 
       // Footer year
       const footerYear = document.getElementById('footerYear');
@@ -546,6 +568,15 @@
             mobileNav.classList.remove('open');
             hamburger.setAttribute('aria-expanded', 'false');
           });
+        });
+        // Close mobile nav on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+            hamburger.classList.remove('active');
+            mobileNav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.focus();
+          }
         });
       }
 
@@ -592,7 +623,7 @@
               ticking = false;
             });
           }
-        });
+        }, { passive: true });
         backToTop.addEventListener('click', function() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
