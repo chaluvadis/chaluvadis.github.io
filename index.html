@@ -3,32 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nomad In Code — Surendra Chaluvadi</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Surendra Chaluvadi — Platform Engineer</title>
+  <meta name="theme-color" content="#0a0806" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
   <meta
     name="description"
-    content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code."
+    content="Staff-level platform & backend engineer. Building Kubernetes operators, zero-trust security systems, and developer tooling. 15+ years shipping infrastructure."
   />
-  <meta name="keywords" content="Surendra Chaluvadi, platform engineering, backend, Kubernetes, developer tooling, VS Code extensions, zero trust" />
+  <meta name="keywords" content="platform engineering, backend engineer, Kubernetes, zero-trust, SPIRE, OpenBao, developer tooling, VS Code extensions, Go, C#, Python" />
   <meta name="author" content="Surendra Chaluvadi" />
-  <meta property="og:title" content="Nomad In Code — Surendra Chaluvadi" />
-  <meta property="og:description" content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code." />
-  <meta name="twitter:title" content="Nomad In Code — Surendra Chaluvadi" />
-  <meta name="twitter:description" content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Surendra Chaluvadi" />
+  <meta property="og:title" content="Surendra Chaluvadi — Platform Engineer" />
+  <meta property="og:description" content="Staff-level platform & backend engineer. Building Kubernetes operators, zero-trust security systems, and developer tooling." />
+  <meta property="og:url" content="https://chaluvadis.github.io" />
   <meta property="og:image" content="/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Surendra Chaluvadi — Platform Engineer" />
+  <meta name="twitter:description" content="Staff-level platform & backend engineer. Building Kubernetes operators, zero-trust security systems, and developer tooling." />
   <meta name="twitter:image" content="/og-image.svg" />
   <link rel="canonical" href="https://chaluvadis.github.io" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="icon" type="image/svg+xml" href="/favicon-terminal.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://github.com" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Surendra Chaluvadi",
+    "alternateName": "Nomad In Code",
+    "description": "Staff-level platform and backend engineer building Kubernetes operators, zero-trust security systems, and developer tooling.",
+    "url": "https://chaluvadis.github.io",
+    "sameAs": [
+      "https://github.com/chaluvadis",
+      "https://linkedin.com/in/surendra-chaluvadi"
+    ],
+    "jobTitle": "Staff Platform & Backend Engineer",
+    "knowsAbout": [
+      "Kubernetes",
+      "Platform Engineering",
+      "Zero-Trust Security",
+      "SPIRE",
+      "OpenBao",
+      "Backend Systems",
+      "Developer Tooling",
+      "Go",
+      "C#",
+      "Python",
+      "TypeScript"
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "professional experience",
+      "description": "15+ years in platform and backend engineering"
+    }
+  }
+  </script>
+
+  <!-- WebPage structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Surendra Chaluvadi — Platform Engineer",
+    "description": "Portfolio of Surendra Chaluvadi, a staff-level platform and backend engineer.",
+    "url": "https://chaluvadis.github.io",
+    "inLanguage": "en-US",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "about": {
+      "@type": "Person",
+      "name": "Surendra Chaluvadi"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <!-- Skip link for keyboard accessibility -->
+  <a class="skip-link" href="#top">Skip to main content</a>
+
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Home">
         <span class="brand-prompt">&gt;</span> surendra
@@ -39,10 +107,10 @@
         <a href="#skills">skills</a>
         <a href="#contact">contact</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Toggle theme">
         <span id="themeIconText">&gt;</span>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -57,77 +125,60 @@
   </header>
 
   <main id="top">
-    <!-- Terminal Hero -->
+    <!-- Hero -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-layout">
-          <div class="hero-content">
-            <div class="terminal-window reveal">
-              <div class="terminal-bar">
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-                <span class="terminal-dot"></span>
-                <span class="terminal-title">nomad@portfolio</span>
-              </div>
-              <div class="terminal-body">
-                <div class="terminal-line">
-                  <span class="prompt">&gt;</span>
-                  <span class="cmd">whoami</span>
-                </div>
-                <div class="terminal-output">
-                  surendra chaluvadi — platform &amp; backend engineer
-                </div>
-                <div class="terminal-line">
-                  <span class="prompt">&gt;</span>
-                  <span class="cmd">cat motto.txt</span>
-                </div>
-                <div class="terminal-output">
-                  "Born nowhere. Deployed everywhere. Powered by code."
-                </div>
-                <div class="terminal-line">
-                  <span class="prompt">&gt;</span>
-                  <span class="cmd blinking-cursor">echo $FOCUS</span>
-                </div>
-                <div class="terminal-output">
-                  kubernetes · apis · developer tooling · zero-trust
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-actions reveal">
-              <a class="button button-primary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
-                <span class="button-icon">$</span> view-github
-              </a>
-              <a class="button button-secondary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">
-                <span class="button-icon">$</span> linkedin
-              </a>
-            </div>
+      <div class="container hero-inner">
+        <!-- Terminal -->
+        <div class="terminal-window reveal" id="heroTerminal">
+          <button class="skip-anim" id="skipAnim" aria-label="Skip animation">skip</button>
+          <div class="terminal-bar">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-title">nomad@portfolio</span>
           </div>
-
-          <div class="hero-visual reveal">
-            <div class="avatar-frame">
-              <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" />
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">&gt;</span>
+              <span class="cmd">whoami</span>
+            </div>
+            <div class="terminal-output">
+              surendra chaluvadi — platform &amp; backend engineer
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">&gt;</span>
+              <span class="cmd">cat motto.txt</span>
+            </div>
+            <div class="terminal-output">
+              "Born nowhere. Deployed everywhere. Powered by code."
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">&gt;</span>
+              <span class="cmd blinking-cursor">echo $FOCUS</span>
+            </div>
+            <div class="terminal-output">
+              kubernetes · apis · developer tooling · zero-trust
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Stats Strip -->
-    <section class="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item reveal">
-            <span class="stat-value">15+</span>
-            <span class="stat-label">years in systems engineering</span>
-          </div>
-          <div class="stat-item reveal">
-            <span class="stat-value">&gt;10</span>
-            <span class="stat-label">open-source projects</span>
-          </div>
-          <div class="stat-item reveal">
-            <span class="stat-value">vsix</span>
-            <span class="stat-label">published extensions</span>
+        <!-- Hero Actions -->
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
+            <span class="button-icon">$</span> view-github
+          </a>
+          <a class="button button-secondary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">
+            <span class="button-icon">$</span> linkedin
+          </a>
+          <a class="button button-secondary" href="mailto:chaluvadis@gmail.com" target="_blank" rel="noreferrer">
+            <span class="button-icon">@</span> email
+          </a>
+        </div>
+
+        <!-- Avatar -->
+        <div class="hero-visual reveal">
+          <div class="avatar-frame">
+            <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -142,7 +193,7 @@
           </div>
           <div class="about-body reveal">
             <p class="about-lead">
-              I'm a platform and backend engineer who builds the infrastructure layer that helps teams ship software with less friction. Backend APIs, developer tooling, platform workflows, workload identity, deployment systems.
+              Staff-level platform &amp; backend engineer with 15+ years building infrastructure that helps teams ship software with less friction. Backend APIs, developer tooling, platform workflows, workload identity, and deployment systems.
             </p>
             <p>
               Most of my projects start as side experiments — I scratch my own itch, automate something tedious, or build a tool to make my own workflow smoother. If it saves me time, I polish it and open-source it. If it helps someone else along the way, even better.
@@ -164,13 +215,14 @@
         </div>
 
         <div class="project-grid">
-          <article class="card project-card reveal" style="--span: 2;">
+          <article class="project-card reveal" style="--span: 2;">
             <div class="project-header">
               <span class="project-index">#01</span>
               <span class="project-type">kubernetes · zero-trust</span>
             </div>
             <h3>openbao-spire-integration</h3>
-            <p>Zero-trust Kubernetes architecture combining workload identity, secrets management, and PKI. My deep dive into building secure infrastructure from the ground up using SPIRE and OpenBao.</p>
+            <p>Zero-trust Kubernetes architecture combining workload identity, secrets management, and PKI. Built from the ground up using SPIRE and OpenBao to eliminate static secrets.</p>
+            <p class="project-impact">Short-lived credentials across all workloads, federated trust between services — no more shared API keys or hardcoded tokens.</p>
             <div class="project-tags">
               <span class="tag">SPIRE</span>
               <span class="tag">OpenBao</span>
@@ -180,13 +232,14 @@
             <a class="project-link" href="https://github.com/chaluvadis/openbao-spire-integration" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal" style="--span: 1;">
+          <article class="project-card reveal" style="--span: 1;">
             <div class="project-header">
               <span class="project-index">#02</span>
               <span class="project-type">kubernetes · go</span>
             </div>
             <h3>valkey-operator</h3>
-            <p>Kubernetes operator for automating lifecycle, scaling, and upgrades. Built to learn the operator pattern in Go.</p>
+            <p>Kubernetes operator for automating Valkey lifecycle, scaling, and upgrades.</p>
+            <p class="project-impact">Automated scaling and controlled rollouts — no more manual Redis ops during incidents.</p>
             <div class="project-tags">
               <span class="tag">Go</span>
               <span class="tag">Operator</span>
@@ -195,13 +248,14 @@
             <a class="project-link" href="https://github.com/chaluvadis/valkey-operator" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal" style="--span: 1;">
+          <article class="project-card reveal" style="--span: 1;">
             <div class="project-header">
               <span class="project-index">#03</span>
               <span class="project-type">vs-code</span>
             </div>
             <h3>safe-to-send</h3>
             <p>VS Code extension that scans selected code before AI sharing — because I almost pasted secrets into a prompt once.</p>
+            <p class="project-impact">Catch secrets before they leave your IDE. Works on selected code or entire files.</p>
             <div class="project-tags">
               <span class="tag">VS Code</span>
               <span class="tag">Security</span>
@@ -210,13 +264,14 @@
             <a class="project-link" href="https://github.com/chaluvadis/safe-to-send" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal" style="--span: 1;">
+          <article class="project-card reveal" style="--span: 1;">
             <div class="project-header">
               <span class="project-index">#04</span>
               <span class="project-type">vs-code · .net</span>
             </div>
             <h3>di-navigator</h3>
-            <p>VS Code extension for visualizing .NET DI registrations. Because scrolling through code looking for setups hurt.</p>
+            <p>VS Code extension for visualizing .NET DI registrations — published, ⭐6.</p>
+            <p class="project-impact">Stop scrolling through code to find registrations. Visual dependency graphs save debugging time.</p>
             <div class="project-tags">
               <span class="tag">VS Code</span>
               <span class="tag">.NET</span>
@@ -225,13 +280,14 @@
             <a class="project-link" href="https://github.com/chaluvadis/di-navigator" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal" style="--span: 1;">
+          <article class="project-card reveal" style="--span: 1;">
             <div class="project-header">
               <span class="project-index">#05</span>
               <span class="project-type">devops · tooling</span>
             </div>
             <h3>chart-profile-visualizer</h3>
-            <p>Compare and understand Helm chart behavior across environments. Staring at YAML diffs was no fun.</p>
+            <p>Compare and visualize Helm chart behavior across environments.</p>
+            <p class="project-impact">See diffs visually instead of squinting at YAML. Used in staging/prod comparison workflows.</p>
             <div class="project-tags">
               <span class="tag">Helm</span>
               <span class="tag">Kubernetes</span>
@@ -240,13 +296,14 @@
             <a class="project-link" href="https://github.com/chaluvadis/chart-profile-visualizer" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal" style="--span: 1;">
+          <article class="project-card reveal" style="--span: 1;">
             <div class="project-header">
               <span class="project-index">#06</span>
               <span class="project-type">database · automation</span>
             </div>
             <h3>postgres-schema-sync</h3>
-            <p>Schema comparison and sync for backend workflows. Automated the database diffing task I kept doing by hand.</p>
+            <p>Schema comparison and sync for backend workflows.</p>
+            <p class="project-impact">Automated the database diffing task I kept doing by hand. Safer migrations, no more schema drift.</p>
             <div class="project-tags">
               <span class="tag">PostgreSQL</span>
               <span class="tag">Automation</span>
@@ -257,18 +314,26 @@
       </div>
     </section>
 
-    <!-- Currently Learning -->
-    <section class="section learning">
+    <!-- Impact -->
+    <section class="section impact" id="impact">
       <div class="container">
-        <div class="learning-card reveal">
-          <span class="section-tag"># now_learning</span>
-          <div class="learning-content">
-            <span class="learning-prompt">&gt; echo $CURRENTLY_LEARNING</span>
-            <span class="learning-items">
-              <span class="learning-item">Rust</span>
-              <span class="learning-item">WebAssembly</span>
-              <span class="learning-item">eBPF</span>
-            </span>
+        <div class="section-header reveal">
+          <span class="section-tag"># impact</span>
+          <h2 class="section-title">by the numbers.</h2>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card reveal">
+            <div class="impact-value">15+</div>
+            <div class="impact-label">years shipping production systems</div>
+          </div>
+          <div class="impact-card reveal">
+            <div class="impact-value">295</div>
+            <div class="impact-label">public repositories</div>
+          </div>
+          <div class="impact-card reveal">
+            <div class="impact-value">7+</div>
+            <div class="impact-label">open-source tools published</div>
           </div>
         </div>
       </div>
@@ -339,21 +404,53 @@
             <a class="button button-secondary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
               <span class="button-icon">$</span> github
             </a>
+            <!-- TODO: Replace with actual resume PDF path -->
+            <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noreferrer">
+              <span class="button-icon">↓</span> resume
+            </a>
+            <a class="button button-secondary" href="mailto:chaluvadis@gmail.com" target="_blank" rel="noreferrer">
+              <span class="button-icon">@</span> email
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <span class="footer-prompt">&gt; nomad_in_code</span>
-        <span class="footer-text">built with plain html + css · no framework · no bundler</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-prompt">&gt; nomad_in_code</span>
+          <p class="footer-text">Staff platform &amp; backend engineer. Building infrastructure that ships software with less friction.</p>
+        </div>
+        <div>
+          <span class="footer-heading">navigate</span>
+          <ul class="footer-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#systems">projects</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-heading">connect</span>
+          <ul class="footer-links">
+            <li><a href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">github</a></li>
+            <li><a href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">linkedin</a></li>
+            <li><a href="mailto:chaluvadis@gmail.com">email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
         <span class="footer-year" id="footerYear"></span>
       </div>
     </div>
   </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
   <script>
     (function() {
@@ -361,10 +458,10 @@
       const THEME_ATTR = 'data-theme';
       const root = document.documentElement;
       const toggle = document.getElementById('themeToggle');
-      const icon = document.getElementById('themeIcon');
+      const iconText = document.getElementById('themeIconText');
 
-      const lightIcon = '&lt;/';
-      const darkIcon = '&gt;';
+      const lightIcon = '&#60;/';
+      const darkIcon = '&#62;';
 
       function getTimeBasedTheme() {
         const hour = new Date().getHours();
@@ -373,8 +470,12 @@
 
       function setTheme(theme) {
         root.setAttribute(THEME_ATTR, theme);
-        const themeText = document.getElementById('themeIconText');
-        if (themeText) themeText.innerHTML = theme === 'light' ? lightIcon : darkIcon;
+        const currentIcon = theme === 'light' ? lightIcon : darkIcon;
+        if (iconText) iconText.innerHTML = currentIcon;
+        if (toggle) {
+          toggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+          toggle.setAttribute('title', 'Toggle theme');
+        }
         if (theme !== 'auto') {
           localStorage.setItem(STORAGE_KEY, theme);
         } else {
@@ -408,16 +509,23 @@
       toggle.addEventListener('click', toggleTheme);
       initTheme();
 
-      // Scroll progress bar
+      // Scroll progress bar (debounced via rAF)
       const progressBar = document.getElementById('scrollProgress');
+      let ticking = false;
       window.addEventListener('scroll', function() {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-        progressBar.style.width = progress + '%';
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            progressBar.style.width = progress + '%';
+            ticking = false;
+          });
+          ticking = true;
+        }
       });
 
-      // Footer year (auto-updating)
+      // Footer year
       const footerYear = document.getElementById('footerYear');
       if (footerYear) footerYear.textContent = '© ' + new Date().getFullYear();
 
@@ -427,14 +535,16 @@
       if (hamburger && mobileNav) {
         hamburger.addEventListener('click', function() {
           hamburger.classList.toggle('active');
-          const isOpen = mobileNav.style.display === 'block';
-          mobileNav.style.display = isOpen ? 'none' : 'block';
+          const isOpen = mobileNav.classList.contains('open');
+          mobileNav.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', !isOpen);
         });
         // Close mobile nav on link click
         mobileNav.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', function() {
             hamburger.classList.remove('active');
-            mobileNav.style.display = 'none';
+            mobileNav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
           });
         });
       }
@@ -465,6 +575,37 @@
         });
       }, { rootMargin: '-30% 0px -60% 0px' });
       sections.forEach(s => navObserver.observe(s));
+
+      // Back to top button (shares rAF tick with scroll progress)
+      const backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        const origRAF = window.requestAnimationFrame;
+        window.addEventListener('scroll', function() {
+          if (!ticking) {
+            ticking = true;
+            origRAF(function() {
+              if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+              } else {
+                backToTop.classList.remove('visible');
+              }
+              ticking = false;
+            });
+          }
+        });
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Skip animation button
+      const skipBtn = document.getElementById('skipAnim');
+      const terminal = document.getElementById('heroTerminal');
+      if (skipBtn && terminal) {
+        skipBtn.addEventListener('click', function() {
+          terminal.classList.add('skipped');
+        });
+      }
     })();
   </script>
 </body>
