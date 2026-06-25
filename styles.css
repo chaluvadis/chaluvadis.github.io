@@ -339,12 +339,28 @@ select:focus-visible,
 
 /* ===== HERO ===== */
 .hero {
-  padding: 2rem 0 1.5rem;
+  padding: 3rem 0 2rem;
 }
 
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "title    terminal"
+    "actions  terminal"
+    "avatar   terminal";
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Hero Title */
 .hero-title {
   text-align: left;
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
@@ -361,22 +377,10 @@ select:focus-visible,
   margin-top: 0.3rem;
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  grid-template-areas:
-    "title    terminal"
-    "actions  terminal"
-    "avatar   terminal";
-  column-gap: 3rem;
-  row-gap: 1rem;
-  align-items: start;
-}
-
 /* Terminal Window */
 .terminal-window {
   width: 100%;
-  max-width: none;
+  max-width: 500px;
   grid-area: terminal;
   background: var(--terminal-bg);
   border: 1px solid var(--border);
@@ -1462,34 +1466,6 @@ select:focus-visible,
 
   .hero {
     padding: 1.5rem 0 1rem;
-  }
-
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-  }
-
-  .hero-title {
-    text-align: center;
-    font-size: clamp(1.2rem, 6vw, 1.6rem);
-    grid-area: unset;
-  }
-
-  .terminal-window {
-    grid-area: unset;
-    max-width: none;
-  }
-
-  .hero-actions {
-    grid-area: unset;
-    justify-content: center;
-  }
-
-  .hero-visual {
-    grid-area: unset;
-    align-items: center;
   }
 
   .section {

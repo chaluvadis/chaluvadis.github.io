@@ -40,6 +40,11 @@
   <link rel="preconnect" href="https://github.com" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://github.com data:; connect-src 'none';" />
+
   <!-- Structured data for SEO -->
   <script type="application/ld+json">
   {
@@ -187,7 +192,7 @@
           </div>
         </div>
 
-        <!-- Hero Actions -->
+<!-- Hero Actions -->
         <div class="hero-actions reveal">
           <a class="button button-primary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
             <span class="button-icon">$</span> view-github
@@ -195,15 +200,12 @@
           <a class="button button-secondary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">
             <span class="button-icon">$</span> linkedin
           </a>
-          <a class="button button-secondary" href="mailto:chaluvadis@gmail.com" target="_blank" rel="noreferrer">
-            <span class="button-icon">@</span> email
-          </a>
         </div>
 
         <!-- Avatar -->
         <div class="hero-visual reveal">
           <div class="avatar-frame">
-            <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" width="100" height="100" decoding="async" fetchpriority="high" />
+            <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" width="100" height="100" loading="lazy" decoding="async" fetchpriority="high" />
           </div>
         </div>
       </div>
@@ -647,19 +649,12 @@
           <p class="contact-text">
             I'm open to conversations around backend infrastructure, platform engineering, Kubernetes, and developer tooling.
           </p>
-          <div class="contact-links">
+<div class="contact-links">
             <a class="button button-primary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">
               <span class="button-icon">$</span> linkedin
             </a>
             <a class="button button-secondary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
               <span class="button-icon">$</span> github
-            </a>
-            <!-- TODO: Replace with actual resume PDF path -->
-            <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noreferrer">
-              <span class="button-icon">↓</span> resume
-            </a>
-            <a class="button button-secondary" href="mailto:chaluvadis@gmail.com" target="_blank" rel="noreferrer">
-              <span class="button-icon">@</span> email
             </a>
           </div>
         </div>
@@ -690,7 +685,6 @@
           <ul class="footer-links">
             <li><a href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">github</a></li>
             <li><a href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">linkedin</a></li>
-            <li><a href="mailto:chaluvadis@gmail.com">email</a></li>
           </ul>
         </div>
       </div>
