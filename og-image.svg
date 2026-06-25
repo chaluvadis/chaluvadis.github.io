@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Mono';
+        src: local('JetBrains Mono'), local('Courier New'), local('monospace');
+      }
+      .bg { fill: #0a0806; }
+      .dot { fill: #d4944a; opacity: 0.15; }
+      .accent { fill: #d4944a; }
+      .bright { fill: #e8ad6a; }
+      .text { fill: #f0e6d8; }
+      .dim { fill: #9a8b7a; }
+      .muted { fill: #6d6052; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="630" rx="0"/>
+
+  <!-- Dot grid pattern -->
+  <g class="dot">
+    <circle cx="24" cy="24" r="1"/>
+    <circle cx="48" cy="24" r="1"/>
+    <circle cx="72" cy="24" r="1"/>
+    <circle cx="96" cy="24" r="1"/>
+    <circle cx="120" cy="24" r="1"/>
+    <circle cx="144" cy="24" r="1"/>
+    <circle cx="168" cy="24" r="1"/>
+    <circle cx="192" cy="24" r="1"/>
+    <circle cx="216" cy="24" r="1"/>
+    <circle cx="240" cy="24" r="1"/>
+    <circle cx="264" cy="24" r="1"/>
+    <circle cx="288" cy="24" r="1"/>
+    <circle cx="312" cy="24" r="1"/>
+    <circle cx="336" cy="24" r="1"/>
+    <circle cx="360" cy="24" r="1"/>
+    <circle cx="384" cy="24" r="1"/>
+    <circle cx="408" cy="24" r="1"/>
+    <circle cx="432" cy="24" r="1"/>
+    <circle cx="456" cy="24" r="1"/>
+    <circle cx="480" cy="24" r="1"/>
+    <circle cx="504" cy="24" r="1"/>
+    <circle cx="528" cy="24" r="1"/>
+    <circle cx="552" cy="24" r="1"/>
+    <circle cx="576" cy="24" r="1"/>
+    <circle cx="600" cy="24" r="1"/>
+    <circle cx="624" cy="24" r="1"/>
+    <circle cx="648" cy="24" r="1"/>
+    <circle cx="672" cy="24" r="1"/>
+    <circle cx="696" cy="24" r="1"/>
+    <circle cx="720" cy="24" r="1"/>
+    <circle cx="744" cy="24" r="1"/>
+    <circle cx="768" cy="24" r="1"/>
+    <circle cx="792" cy="24" r="1"/>
+    <circle cx="816" cy="24" r="1"/>
+    <circle cx="840" cy="24" r="1"/>
+    <circle cx="864" cy="24" r="1"/>
+    <circle cx="888" cy="24" r="1"/>
+    <circle cx="912" cy="24" r="1"/>
+    <circle cx="936" cy="24" r="1"/>
+    <circle cx="960" cy="24" r="1"/>
+    <circle cx="984" cy="24" r="1"/>
+    <circle cx="1008" cy="24" r="1"/>
+    <circle cx="1032" cy="24" r="1"/>
+    <circle cx="1056" cy="24" r="1"/>
+    <circle cx="1080" cy="24" r="1"/>
+    <circle cx="1104" cy="24" r="1"/>
+    <circle cx="1128" cy="24" r="1"/>
+    <circle cx="1152" cy="24" r="1"/>
+    <circle cx="1176" cy="24" r="1"/>
+    <circle cx="24" cy="48" r="1"/>
+    <circle cx="48" cy="48" r="1"/>
+    <circle cx="72" cy="48" r="1"/>
+    <circle cx="96" cy="48" r="1"/>
+    <circle cx="120" cy="48" r="1"/>
+    <circle cx="144" cy="48" r="1"/>
+    <circle cx="168" cy="48" r="1"/>
+    <circle cx="192" cy="48" r="1"/>
+    <circle cx="216" cy="48" r="1"/>
+    <circle cx="240" cy="48" r="1"/>
+    <circle cx="264" cy="48" r="1"/>
+    <circle cx="288" cy="48" r="1"/>
+    <circle cx="312" cy="48" r="1"/>
+    <circle cx="336" cy="48" r="1"/>
+    <circle cx="360" cy="48" r="1"/>
+    <circle cx="384" cy="48" r="1"/>
+    <circle cx="408" cy="48" r="1"/>
+    <circle cx="432" cy="48" r="1"/>
+    <circle cx="456" cy="48" r="1"/>
+    <circle cx="480" cy="48" r="1"/>
+    <circle cx="504" cy="48" r="1"/>
+    <circle cx="528" cy="48" r="1"/>
+    <circle cx="552" cy="48" r="1"/>
+    <circle cx="576" cy="48" r="1"/>
+    <circle cx="600" cy="48" r="1"/>
+    <circle cx="624" cy="48" r="1"/>
+    <circle cx="648" cy="48" r="1"/>
+    <circle cx="672" cy="48" r="1"/>
+    <circle cx="696" cy="48" r="1"/>
+    <circle cx="720" cy="48" r="1"/>
+    <circle cx="744" cy="48" r="1"/>
+    <circle cx="768" cy="48" r="1"/>
+    <circle cx="792" cy="48" r="1"/>
+    <circle cx="816" cy="48" r="1"/>
+    <circle cx="840" cy="48" r="1"/>
+    <circle cx="864" cy="48" r="1"/>
+    <circle cx="888" cy="48" r="1"/>
+    <circle cx="912" cy="48" r="1"/>
+    <circle cx="936" cy="48" r="1"/>
+    <circle cx="960" cy="48" r="1"/>
+    <circle cx="984" cy="48" r="1"/>
+    <circle cx="1008" cy="48" r="1"/>
+    <circle cx="1032" cy="48" r="1"/>
+    <circle cx="1056" cy="48" r="1"/>
+    <circle cx="1080" cy="48" r="1"/>
+    <circle cx="1104" cy="48" r="1"/>
+    <circle cx="1128" cy="48" r="1"/>
+    <circle cx="1152" cy="48" r="1"/>
+    <circle cx="1176" cy="48" r="1"/>
+  </g>
+
+  <!-- Center accent glow -->
+  <circle cx="600" cy="315" r="200" fill="#d4944a" opacity="0.03"/>
+  <circle cx="600" cy="315" r="100" fill="#d4944a" opacity="0.04"/>
+
+  <!-- Left side: Name and title -->
+  <text x="100" y="240" class="accent" font-family="Mono, monospace" font-size="18" font-weight="700">&gt; nomad_in_code</text>
+  <text x="100" y="300" class="bright" font-family="Mono, monospace" font-size="48" font-weight="800">SURENDRA</text>
+  <text x="100" y="360" class="bright" font-family="Mono, monospace" font-size="48" font-weight="800">CHALUVADI</text>
+  <text x="100" y="410" class="dim" font-family="Mono, monospace" font-size="16">platform &amp; backend engineer</text>
+
+  <!-- Right side: Terminal snippet -->
+  <rect x="750" y="180" width="350" height="250" rx="12" fill="#0f0c09" stroke="#d4944a" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Terminal bar -->
+  <rect x="750" y="180" width="350" height="36" rx="12" fill="#1a1512"/>
+  <rect x="750" y="198" width="350" height="18" fill="#1a1512"/>
+  <circle cx="772" cy="198" r="5" fill="#ff5f57"/>
+  <circle cx="790" cy="198" r="5" fill="#ffbd2e"/>
+  <circle cx="808" cy="198" r="5" fill="#28c840"/>
+  <text x="900" y="203" class="muted" font-family="Mono, monospace" font-size="11" text-anchor="middle">nomad@portfolio</text>
+
+  <!-- Terminal content -->
+  <text x="770" y="240" class="accent" font-family="Mono, monospace" font-size="13">&gt;</text>
+  <text x="795" y="240" class="dim" font-family="Mono, monospace" font-size="13">whoami</text>
+  <text x="795" y="268" class="text" font-family="Mono, monospace" font-size="13">surendra chaluvadi — platform engineer</text>
+
+  <text x="770" y="300" class="accent" font-family="Mono, monospace" font-size="13">&gt;</text>
+  <text x="795" y="300" class="dim" font-family="Mono, monospace" font-size="13">cat motto.txt</text>
+  <text x="795" y="328" class="text" font-family="Mono, monospace" font-size="13">"Born nowhere. Deployed everywhere."</text>
+
+  <text x="770" y="360" class="accent" font-family="Mono, monospace" font-size="13">&gt;</text>
+  <text x="795" y="360" class="dim" font-family="Mono, monospace" font-size="13">echo $FOCUS</text>
+  <text x="795" y="388" class="text" font-family="Mono, monospace" font-size="13">kubernetes · tooling · zero-trust</text>
+
+  <text x="795" y="420" class="accent" font-family="Mono, monospace" font-size="13">&gt;</text>
+  <text x="820" y="420" class="text" font-family="Mono, monospace" font-size="13" opacity="0.5">_</text>
+</svg>
