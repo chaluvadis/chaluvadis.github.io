@@ -3,45 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surendra Chaluvadi | Platform & Backend Engineering</title>
+  <title>Nomad In Code — Surendra Chaluvadi</title>
   <meta
     name="description"
-    content="Platform and backend engineer building secure cloud systems, developer tooling, and AI-safe engineering workflows."
+    content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code."
   />
-  <meta
-    name="keywords"
-    content="Surendra Chaluvadi, platform engineering, backend engineering, Kubernetes, cloud infrastructure, developer tooling, zero trust, AI workflow safety, APIs"
-  />
+  <meta name="keywords" content="Surendra Chaluvadi, platform engineering, backend, Kubernetes, developer tooling, VS Code extensions, zero trust" />
   <meta name="author" content="Surendra Chaluvadi" />
-  <meta property="og:title" content="Surendra Chaluvadi | Platform & Backend Engineering" />
-  <meta
-    property="og:description"
-    content="Secure cloud systems, developer tooling, and AI-safe engineering workflows."
-  />
-  <meta name="twitter:title" content="Surendra Chaluvadi | Platform & Backend Engineering" />
-  <meta
-    name="twitter:description"
-    content="Platform and backend engineer building secure cloud systems, developer tooling, and AI-safe engineering workflows."
-  />
+  <meta property="og:title" content="Nomad In Code — Surendra Chaluvadi" />
+  <meta property="og:description" content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code." />
+  <meta name="twitter:title" content="Nomad In Code — Surendra Chaluvadi" />
+  <meta name="twitter:description" content="Platform and backend engineer. Born nowhere. Deployed everywhere. Powered by code." />
   <link rel="canonical" href="https://chaluvadis.github.io" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Home">Surendra Chaluvadi</a>
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-prompt">&gt;</span> surendra
+      </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#systems">Systems</a>
-        <a href="#skills">Skills</a>
-        <a href="#github">GitHub</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">about</a>
+        <a href="#systems">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <svg id="themeIcon" viewBox="0 0 24 24" fill="currentColor">
           <path d="M21.752 15.002A9.718 9.718 0 0112 21.75c-5.385 0-9.75-4.365-9.75-9.75 0-4.793 3.657-8.718 8.386-9.582a.75.75 0 01.9.71v1.5a.75.75 0 01-.75.75C7.425 8.25 5.25 10.425 5.25 13.5c0 2.993 2.453 5.453 5.453 5.5.253.004.503-.03.747-.097a.75.75 0 01.552 1.392A6.958 6.958 0 0112 20.25c-3.862 0-7.02-3.04-7.02-6.75 0-3.447 2.653-6.297 6.047-6.297.155 0 .31.007.465.021a.75.75 0 01-.068 1.495 5.497 5.497 0 00-5.46-4.771c0 2.572 2.066 4.65 4.65 4.65h1.5a.75.75 0 01.75.75v1.5a.75.75 0 01-.71.75z"/>
         </svg>
@@ -50,227 +45,285 @@
   </header>
 
   <main id="top">
+    <!-- Terminal Hero -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-visual reveal">
-          <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" />
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Platform Engineering · Backend Systems · Secure Cloud Workflows</p>
-          <h1 class="reveal">I build the systems engineers use to ship, operate, and trust software.</h1>
-          <p class="hero-text reveal">
-            Platform and backend engineer focused on Kubernetes, APIs, developer tooling,
-            zero-trust infrastructure, and AI-safe engineering workflows.
-          </p>
-          <div class="hero-actions reveal">
-            <a class="button button-primary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">View GitHub</a>
-            <a class="button button-secondary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">View LinkedIn</a>
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-content">
+            <div class="terminal-window reveal">
+              <div class="terminal-bar">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">nomad@portfolio</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="prompt">&gt;</span>
+                  <span class="cmd">whoami</span>
+                </div>
+                <div class="terminal-output">
+                  surendra chaluvadi — platform &amp; backend engineer
+                </div>
+                <div class="terminal-line">
+                  <span class="prompt">&gt;</span>
+                  <span class="cmd">cat motto.txt</span>
+                </div>
+                <div class="terminal-output">
+                  "Born nowhere. Deployed everywhere. Powered by code."
+                </div>
+                <div class="terminal-line">
+                  <span class="prompt">&gt;</span>
+                  <span class="cmd blinking-cursor">echo $FOCUS</span>
+                </div>
+                <div class="terminal-output">
+                  kubernetes · apis · developer tooling · zero-trust
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions reveal">
+              <a class="button button-primary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
+                <span class="button-icon">$</span> view-github
+              </a>
+              <a class="button button-secondary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">
+                <span class="button-icon">$</span> linkedin
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="avatar-frame">
+              <img src="https://github.com/chaluvadis.png?size=400" alt="Surendra Chaluvadi" class="hero-avatar" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section about">
-      <div class="container section-grid">
-        <div>
-          <p class="section-tag reveal">About</p>
-          <h2 class="section-title reveal">Engineering for clarity, safety, and scale.</h2>
-        </div>
-        <div class="section-body reveal">
-          <p>
-            I work on the infrastructure layer that helps teams build and ship software with less friction:
-            backend APIs, developer tooling, platform workflows, workload identity, and deployment systems.
-          </p>
-          <p>
-            The goal is to turn operational complexity into systems that are usable, trustworthy, and easier to scale.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="proof">
-      <div class="container proof-grid">
-        <article class="card proof-card reveal">
-          <span class="proof-kicker">Experience</span>
-          <h2>15+ years</h2>
-          <p>Distributed systems, backend engineering, cloud infrastructure, and tooling.</p>
-        </article>
-        <article class="card proof-card reveal">
-          <span class="proof-kicker">Built for</span>
-          <h2>Engineering leverage</h2>
-          <p>Operators, workflow tooling, schema automation, and secure platform patterns.</p>
-        </article>
-        <article class="card proof-card reveal">
-          <span class="proof-kicker">Current themes</span>
-          <h2>Cloud + AI operations</h2>
-          <p>Workload identity, observability, platform systems, and safer developer workflows.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="systems">
+    <!-- Stats Strip -->
+    <section class="stats">
       <div class="container">
-        <div class="section-head">
-          <p class="section-tag reveal">Featured systems</p>
-          <h2 class="section-title reveal">Selected projects that show how I think.</h2>
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <span class="stat-value">15+</span>
+            <span class="stat-label">years in systems engineering</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-value">&gt;10</span>
+            <span class="stat-label">open-source projects</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-value">vsix</span>
+            <span class="stat-label">published extensions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-tag reveal">
+            <span class="section-tag"># about</span>
+          </div>
+          <div class="about-body reveal">
+            <p class="about-lead">
+              I'm a platform and backend engineer who builds the infrastructure layer that helps teams ship software with less friction. Backend APIs, developer tooling, platform workflows, workload identity, deployment systems.
+            </p>
+            <p>
+              Most of my projects start as side experiments — I scratch my own itch, automate something tedious, or build a tool to make my own workflow smoother. If it saves me time, I polish it and open-source it. If it helps someone else along the way, even better.
+            </p>
+            <p>
+              My focus areas are zero-trust infrastructure, developer experience, and cloud operations. I work across Kubernetes, .NET, TypeScript, Go, and Python.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="systems">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"># projects</span>
+          <h2 class="section-title">things I've built.</h2>
         </div>
 
-        <div class="card-grid">
-          <article class="card project-card reveal">
+        <div class="project-grid">
+          <article class="card project-card reveal" style="--span: 2;">
+            <div class="project-header">
+              <span class="project-index">#01</span>
+              <span class="project-type">kubernetes · zero-trust</span>
+            </div>
             <h3>openbao-spire-integration</h3>
-            <p>Zero-trust Kubernetes architecture combining workload identity, secrets, and PKI design.</p>
-            <ul>
-              <li>SPIRE-based identity patterns</li>
-              <li>Trust boundaries and secrets flow</li>
-              <li>High-signal platform security work</li>
-            </ul>
-            <a href="https://github.com/chaluvadis/openbao-spire-integration" target="_blank" rel="noreferrer">Open repository →</a>
+            <p>Zero-trust Kubernetes architecture combining workload identity, secrets management, and PKI. My deep dive into building secure infrastructure from the ground up using SPIRE and OpenBao.</p>
+            <div class="project-tags">
+              <span class="tag">SPIRE</span>
+              <span class="tag">OpenBao</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">PKI</span>
+            </div>
+            <a class="project-link" href="https://github.com/chaluvadis/openbao-spire-integration" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card reveal" style="--span: 1;">
+            <div class="project-header">
+              <span class="project-index">#02</span>
+              <span class="project-type">kubernetes · go</span>
+            </div>
             <h3>valkey-operator</h3>
-            <p>Kubernetes operator work for automating lifecycle, scaling, upgrades, and operational control.</p>
-            <ul>
-              <li>Operator/controller mindset</li>
-              <li>Automation for infra workflows</li>
-              <li>Distributed systems operations</li>
-            </ul>
-            <a href="https://github.com/chaluvadis/valkey-operator" target="_blank" rel="noreferrer">Open repository →</a>
+            <p>Kubernetes operator for automating lifecycle, scaling, and upgrades. Built to learn the operator pattern in Go.</p>
+            <div class="project-tags">
+              <span class="tag">Go</span>
+              <span class="tag">Operator</span>
+              <span class="tag">Kubernetes</span>
+            </div>
+            <a class="project-link" href="https://github.com/chaluvadis/valkey-operator" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card reveal" style="--span: 1;">
+            <div class="project-header">
+              <span class="project-index">#03</span>
+              <span class="project-type">vs-code</span>
+            </div>
             <h3>safe-to-send</h3>
-            <p>VS Code extension for scanning code before manual AI sharing to reduce accidental sensitive-data exposure.</p>
-            <ul>
-              <li>AI workflow safety</li>
-              <li>Practical developer guardrails</li>
-              <li>Modern enterprise relevance</li>
-            </ul>
-            <a href="https://github.com/chaluvadis/safe-to-send" target="_blank" rel="noreferrer">Open repository →</a>
+            <p>VS Code extension that scans selected code before AI sharing — because I almost pasted secrets into a prompt once.</p>
+            <div class="project-tags">
+              <span class="tag">VS Code</span>
+              <span class="tag">Security</span>
+              <span class="tag">AI Safety</span>
+            </div>
+            <a class="project-link" href="https://github.com/chaluvadis/safe-to-send" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card reveal" style="--span: 1;">
+            <div class="project-header">
+              <span class="project-index">#04</span>
+              <span class="project-type">vs-code · .net</span>
+            </div>
             <h3>di-navigator</h3>
-            <p>Developer tooling for visualizing .NET dependency injection registrations inside VS Code.</p>
-            <ul>
-              <li>Code navigation clarity</li>
-              <li>Architecture understanding</li>
-              <li>Developer experience focus</li>
-            </ul>
-            <a href="https://github.com/chaluvadis/di-navigator" target="_blank" rel="noreferrer">Open repository →</a>
+            <p>VS Code extension for visualizing .NET DI registrations. Because scrolling through code looking for setups hurt.</p>
+            <div class="project-tags">
+              <span class="tag">VS Code</span>
+              <span class="tag">.NET</span>
+              <span class="tag">DI</span>
+            </div>
+            <a class="project-link" href="https://github.com/chaluvadis/di-navigator" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card reveal" style="--span: 1;">
+            <div class="project-header">
+              <span class="project-index">#05</span>
+              <span class="project-type">devops · tooling</span>
+            </div>
             <h3>chart-profile-visualizer</h3>
-            <p>Tooling to compare and understand Helm chart behavior across environments.</p>
-            <ul>
-              <li>Deployment visibility</li>
-              <li>Config reasoning</li>
-              <li>Platform operations support</li>
-            </ul>
-            <a href="https://github.com/chaluvadis/chart-profile-visualizer" target="_blank" rel="noreferrer">Open repository →</a>
+            <p>Compare and understand Helm chart behavior across environments. Staring at YAML diffs was no fun.</p>
+            <div class="project-tags">
+              <span class="tag">Helm</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">DevOps</span>
+            </div>
+            <a class="project-link" href="https://github.com/chaluvadis/chart-profile-visualizer" target="_blank" rel="noreferrer">open repo →</a>
           </article>
 
-          <article class="card project-card reveal">
+          <article class="card project-card reveal" style="--span: 1;">
+            <div class="project-header">
+              <span class="project-index">#06</span>
+              <span class="project-type">database · automation</span>
+            </div>
             <h3>postgres-schema-sync</h3>
-            <p>Schema comparison and sync tooling for backend and data-platform workflows.</p>
-            <ul>
-              <li>Database automation</li>
-              <li>Backend systems credibility</li>
-              <li>Production-adjacent utility</li>
-            </ul>
-            <a href="https://github.com/chaluvadis/postgres-schema-sync" target="_blank" rel="noreferrer">Open repository →</a>
+            <p>Schema comparison and sync for backend workflows. Automated the database diffing task I kept doing by hand.</p>
+            <div class="project-tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Automation</span>
+            </div>
+            <a class="project-link" href="https://github.com/chaluvadis/postgres-schema-sync" target="_blank" rel="noreferrer">open repo →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <!-- Skills -->
+    <section class="section skills" id="skills">
       <div class="container">
-        <div class="section-head">
-          <p class="section-tag reveal">Skill system</p>
-          <h2 class="section-title reveal">Grouped by systems built, not buzzwords collected.</h2>
+        <div class="section-header reveal">
+          <span class="section-tag"># skills</span>
+          <h2 class="section-title">tools in the toolbox.</h2>
         </div>
 
-        <div class="skills-wrap">
-          <div class="skill-category reveal">
-            <h3>Cloud architecture</h3>
+        <div class="skills-grid">
+          <div class="skill-block reveal">
+            <h3 class="skill-block-title">cloud &amp; infra</h3>
             <div class="skill-tags">
               <span class="skill-tag">AWS</span>
               <span class="skill-tag">Azure</span>
               <span class="skill-tag">Kubernetes</span>
               <span class="skill-tag">Terraform</span>
               <span class="skill-tag">Helm</span>
-              <span class="skill-tag">Workload Identity</span>
-              <span class="skill-tag">Secrets</span>
+              <span class="skill-tag">SPIRE</span>
+              <span class="skill-tag">OpenBao</span>
               <span class="skill-tag">Observability</span>
             </div>
           </div>
-          <div class="skill-category reveal">
-            <h3>Backend systems</h3>
+          <div class="skill-block reveal">
+            <h3 class="skill-block-title">languages</h3>
             <div class="skill-tags">
-              <span class="skill-tag">.NET</span>
               <span class="skill-tag">C#</span>
               <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Go</span>
               <span class="skill-tag">Python</span>
-              <span class="skill-tag">APIs</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">.NET</span>
               <span class="skill-tag">PostgreSQL</span>
               <span class="skill-tag">Redis</span>
-              <span class="skill-tag">Automation</span>
             </div>
           </div>
-          <div class="skill-category reveal">
-            <h3>Developer tooling</h3>
+          <div class="skill-block reveal">
+            <h3 class="skill-block-title">tooling &amp; devex</h3>
             <div class="skill-tags">
               <span class="skill-tag">VS Code Extensions</span>
-              <span class="skill-tag">Workflow Tooling</span>
-              <span class="skill-tag">Schema Automation</span>
-              <span class="skill-tag">API Utilities</span>
-              <span class="skill-tag">Productivity Systems</span>
+              <span class="skill-tag">CLI Tools</span>
+              <span class="skill-tag">Workflow Automation</span>
+              <span class="skill-tag">Schema Tooling</span>
+              <span class="skill-tag">CI/CD</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="github">
-      <div class="container section-grid">
-        <div>
-          <p class="section-tag reveal">GitHub as artifact system</p>
-          <h2 class="section-title reveal">Selected repositories reflect systems thinking, not code dumps.</h2>
-        </div>
-        <div class="section-body reveal">
-          <p>
-            My GitHub is strongest where platform engineering, backend systems, developer tooling,
-            and secure cloud workflows intersect.
-          </p>
-          <p>
-            Featured repositories are curated to show architecture quality, operational thinking,
-            and leverage for other engineers.
-          </p>
-          <a class="text-link" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">Explore GitHub →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
+    <!-- Contact -->
+    <section class="section contact" id="contact">
       <div class="container">
-        <div class="card contact-card reveal">
-          <p class="section-tag">Contact</p>
-          <h2 class="section-title">Open to conversations around backend, platform, and cloud engineering.</h2>
-          <p>
-            If you're hiring for platform systems, backend infrastructure, Kubernetes, or developer tooling,
-            the best starting points are GitHub and LinkedIn.
+        <div class="contact-card reveal">
+          <span class="section-tag"># contact</span>
+          <h2 class="section-title">let's build something.</h2>
+          <p class="contact-text">
+            I'm open to conversations around backend infrastructure, platform engineering, Kubernetes, and developer tooling.
           </p>
-          <div class="hero-actions centered">
-            <a class="button button-primary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="button button-secondary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">GitHub</a>
+          <div class="contact-links">
+            <a class="button button-primary" href="https://linkedin.com/in/surendra-chaluvadi" target="_blank" rel="noreferrer">
+              <span class="button-icon">$</span> linkedin
+            </a>
+            <a class="button button-secondary" href="https://github.com/chaluvadis" target="_blank" rel="noreferrer">
+              <span class="button-icon">$</span> github
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-prompt">&gt; nomad_in_code</span>
+        <span class="footer-text">built with plain html + css · no framework · no bundler</span>
+      </div>
+    </div>
+  </footer>
 
   <script>
     (function() {
@@ -324,6 +377,15 @@
       toggle.addEventListener('click', toggleTheme);
       initTheme();
 
+      // Scroll progress bar
+      const progressBar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', function() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      });
+
       // Scroll reveal
       const reveals = document.querySelectorAll('.reveal');
       const revealObserver = new IntersectionObserver((entries) => {
@@ -333,7 +395,7 @@
             revealObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
       reveals.forEach(el => revealObserver.observe(el));
 
       // Active nav highlight
@@ -348,7 +410,7 @@
             });
           }
         });
-      }, { rootMargin: '-40% 0px -55% 0px' });
+      }, { rootMargin: '-30% 0px -60% 0px' });
       sections.forEach(s => navObserver.observe(s));
     })();
   </script>
