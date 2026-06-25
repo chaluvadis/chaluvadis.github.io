@@ -339,37 +339,45 @@ select:focus-visible,
 
 /* ===== HERO ===== */
 .hero {
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 1.5rem;
 }
 
 .hero-title {
-  text-align: center;
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  text-align: left;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
   letter-spacing: -0.01em;
+  grid-area: title;
+  align-self: end;
 }
 
 .hero-subtitle {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-dim);
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
 }
 
 .hero-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-areas:
+    "title    terminal"
+    "actions  terminal"
+    "avatar   terminal";
+  column-gap: 3rem;
+  row-gap: 1rem;
+  align-items: start;
 }
 
 /* Terminal Window */
 .terminal-window {
   width: 100%;
-  max-width: 720px;
+  max-width: none;
+  grid-area: terminal;
   background: var(--terminal-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -531,14 +539,15 @@ select:focus-visible,
 .hero-visual {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
+  grid-area: avatar;
 }
 
 .avatar-frame {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 88px;
+  height: 88px;
 }
 
 .hero-avatar {
@@ -575,6 +584,8 @@ select:focus-visible,
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  grid-area: actions;
 }
 
 .button {
@@ -662,7 +673,7 @@ select:focus-visible,
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 
 .section-header {
@@ -686,17 +697,26 @@ select:focus-visible,
 }
 
 /* ===== ABOUT ===== */
+.about {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
 .about-lead {
-  font-size: 1.02rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--text);
   margin-bottom: 1rem;
 }
 
+.about-body {
+  max-width: 80ch;
+}
+
 .about-body p {
   color: var(--text-dim);
   margin-bottom: 1rem;
-  max-width: 72ch;
 }
 
 /* ===== PROJECTS ===== */
@@ -1350,6 +1370,35 @@ select:focus-visible,
   }
 }
 
+@media (max-width: 768px) {
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .hero-title {
+    text-align: center;
+    grid-area: unset;
+  }
+
+  .terminal-window {
+    grid-area: unset;
+    max-width: none;
+  }
+
+  .hero-actions {
+    grid-area: unset;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    grid-area: unset;
+    align-items: center;
+  }
+}
+
 @media (max-width: 640px) {
   .nav-links {
     display: none;
@@ -1412,11 +1461,39 @@ select:focus-visible,
   }
 
   .hero {
-    padding: 2.5rem 0 2rem;
+    padding: 1.5rem 0 1rem;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .hero-title {
+    text-align: center;
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    grid-area: unset;
+  }
+
+  .terminal-window {
+    grid-area: unset;
+    max-width: none;
+  }
+
+  .hero-actions {
+    grid-area: unset;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    grid-area: unset;
+    align-items: center;
   }
 
   .section {
-    padding: 2.5rem 0;
+    padding: 1.75rem 0;
   }
 
   .contact-card {
