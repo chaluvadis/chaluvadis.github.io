@@ -345,16 +345,23 @@ select:focus-visible,
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
   grid-template-areas:
-    "avatar   terminal"
-    "title    terminal"
-    "actions  terminal";
+    "name-row  terminal"
+    "actions   terminal";
   column-gap: 2.5rem;
   row-gap: 1.25rem;
   align-items: start;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Hero Name Row */
+.hero-name-row {
+  grid-area: name-row;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 /* Hero Title */
@@ -365,8 +372,6 @@ select:focus-visible,
   color: var(--text);
   line-height: 1.2;
   letter-spacing: -0.01em;
-  grid-area: title;
-  align-self: start;
 }
 
 .hero-subtitle {
@@ -544,8 +549,7 @@ select:focus-visible,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
-  grid-area: avatar;
+  flex-shrink: 0;
 }
 
 .avatar-frame {
@@ -1383,23 +1387,25 @@ select:focus-visible,
     gap: 1.25rem;
   }
 
+  .hero-name-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .hero-title {
     text-align: center;
-    grid-area: unset;
   }
 
   .terminal-window {
-    grid-area: unset;
     max-width: none;
   }
 
   .hero-actions {
-    grid-area: unset;
     justify-content: center;
   }
 
   .hero-visual {
-    grid-area: unset;
     align-items: center;
   }
 }
