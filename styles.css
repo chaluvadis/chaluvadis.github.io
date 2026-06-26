@@ -719,7 +719,7 @@ select:focus-visible,
 }
 
 .about-body {
-  max-width: 80ch;
+  max-width: 120ch;
 }
 
 .about-body p {
